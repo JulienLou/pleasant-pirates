@@ -1,5 +1,11 @@
 # pleasant-pirates
 
+## Welcome / Bienvenue
+```
+Pleasant Pirates is a demonstration website coded in VueJS3, this is my first application coded with this framework.
+Pleasant Pirates est un site web de démonstration codé en VueJS3, il s'agit de ma première application codée avec ce framework.
+```
+
 ## Project setup
 ```
 npm install
