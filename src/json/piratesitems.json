@@ -1,0 +1,173 @@
+{
+    "allItems": [
+        {
+            "id": 1,
+            "name": "Carte des sept mers",
+            "imgPath": "assets/img/superpirates/1.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 2,
+            "name": "Tonneaux",
+            "imgPath": "assets/img/superpirates/2.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 3,
+            "name": "Perroquet",
+            "imgPath": "assets/img/superpirates/3.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 4,
+            "name": "Cordages",
+            "imgPath": "assets/img/superpirates/4.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 5,
+            "name": "Îlot des caraïbes",
+            "imgPath": "assets/img/superpirates/5.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 6,
+            "name": "Cocotiers",
+            "imgPath": "assets/img/superpirates/6.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 7,
+            "name": "Compas",
+            "imgPath": "assets/img/superpirates/7.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 8,
+            "name": "Bateau fantôme",
+            "imgPath": "assets/img/superpirates/8.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 9,
+            "name": "Requin",
+            "imgPath": "assets/img/superpirates/9.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 10,
+            "name": "Tortue de mer",
+            "imgPath": "assets/img/superpirates/10.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 11,
+            "name": "Pièce de pirate",
+            "imgPath": "assets/img/superpirates/11.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 12,
+            "name": "Poissons feu et glace",
+            "imgPath": "assets/img/superpirates/12.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 13,
+            "name": "Plage des contrebandiers",
+            "imgPath": "assets/img/superpirates/13.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 14,
+            "name": "Message en bouteille",
+            "imgPath": "assets/img/superpirates/14.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 15,
+            "name": "Jolly Roger",
+            "imgPath": "assets/img/superpirates/15.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 16,
+            "name": "Coffre aux Trésors",
+            "imgPath": "assets/img/superpirates/16.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 17,
+            "name": "Capitaine Bardin",
+            "imgPath": "assets/img/superpirates/17.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 18,
+            "name": "Capitaine Folk",
+            "imgPath": "assets/img/superpirates/18.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 19,
+            "name": "Bouteille mysterieuse",
+            "imgPath": "assets/img/superpirates/19.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 20,
+            "name": "Barre de navigation",
+            "imgPath": "assets/img/superpirates/20.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 21,
+            "name": "Galion",
+            "imgPath": "assets/img/superpirates/21.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 22,
+            "name": "Capitaine Correia",
+            "imgPath": "assets/img/superpirates/22.jpg",
+            "type": "infinitystone"
+        },
+        {
+            "id": 23,
+            "name": "Crâne pirate",
+            "imgPath": "assets/img/superpirates/23.jpg",
+            "type": "artefact"
+        },
+        {
+            "id": 24,
+            "name": "Carte aux trésors",
+            "imgPath": "assets/img/superpirates/24.jpg",
+            "type": "artefact"
+        },
+        {
+            "id": 25,
+            "name": "Pièces d'or",
+            "imgPath": "assets/img/superpirates/25.jpg",
+            "type": "infinitystone"
+        },
+        {
+            "id": 26,
+            "name": "Coffre du Kraken",
+            "imgPath": "assets/img/superpirates/26.jpg",
+            "type": "infinitystone"
+        },
+        {
+            "id": 27,
+            "name": "Caravelle Blanche",
+            "imgPath": "assets/img/superpirates/27.jpg",
+            "type": "artefact"
+        },
+        {
+            "id": 28,
+            "name": "Médaillon",
+            "imgPath": "assets/img/superpirates/28.jpg",
+            "type": "infinitystone"
+        }
+        
+    ]
+}

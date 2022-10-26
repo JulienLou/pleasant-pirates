@@ -1,0 +1,490 @@
+{
+    "allItems": [
+        {
+            "id": 1,
+            "name": "Vision",
+            "imgPath": "assets/img/superheros/1_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 2,
+            "name": "Groot",
+            "imgPath": "assets/img/superheros/2_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 3,
+            "name": "Wanda",
+            "imgPath": "assets/img/superheros/3_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 4,
+            "name": "Nebula",
+            "imgPath": "assets/img/superheros/4_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 5,
+            "name": "Ironman",
+            "imgPath": "assets/img/superheros/5_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 6,
+            "name": "Doctor Strange",
+            "imgPath": "assets/img/superheros/6_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 7,
+            "name": "Gamora",
+            "imgPath": "assets/img/superheros/7_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 8,
+            "name": "Starlord",
+            "imgPath": "assets/img/superheros/8_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 9,
+            "name": "Drax",
+            "imgPath": "assets/img/superheros/9_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 10,
+            "name": "Thor",
+            "imgPath": "assets/img/superheros/10_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 11,
+            "name": "Wolverine",
+            "imgPath": "assets/img/superheros/11_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 12,
+            "name": "Flash",
+            "imgPath": "assets/img/superheros/12_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 13,
+            "name": "Spiderman",
+            "imgPath": "assets/img/superheros/13_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 14,
+            "name": "Batman",
+            "imgPath": "assets/img/superheros/14_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 15,
+            "name": "Joker",
+            "imgPath": "assets/img/superheros/15_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 16,
+            "name": "Winter Soldier",
+            "imgPath": "assets/img/superheros/16_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 17,
+            "name": "Thanos",
+            "imgPath": "assets/img/superheros/17_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 18,
+            "name": "Superman",
+            "imgPath": "assets/img/superheros/18_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 19,
+            "name": "Captain America",
+            "imgPath": "assets/img/superheros/19_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 20,
+            "name": "Hulk",
+            "imgPath": "assets/img/superheros/20_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 21,
+            "name": "Captain Marvel",
+            "imgPath": "assets/img/superheros/21_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 22,
+            "name": "Venom",
+            "imgPath": "assets/img/superheros/22_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 23,
+            "name": "Riot",
+            "imgPath": "assets/img/superheros/23_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 24,
+            "name": "Deadpool",
+            "imgPath": "assets/img/superheros/24_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 25,
+            "name": "Black Widow",
+            "imgPath": "assets/img/superheros/25_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 26,
+            "name": "Black Panther",
+            "imgPath": "assets/img/superheros/26_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 27,
+            "name": "War Machine",
+            "imgPath": "assets/img/superheros/27_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 28,
+            "name": "Rocket",
+            "imgPath": "assets/img/superheros/28_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 29,
+            "name": "Hawkeye",
+            "imgPath": "assets/img/superheros/29_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 30,
+            "name": "Nick Fury",
+            "imgPath": "assets/img/superheros/30_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 31,
+            "name": "Antman",
+            "imgPath": "assets/img/superheros/31_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 32,
+            "name": "Cyborg",
+            "imgPath": "assets/img/superheros/32_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 33,
+            "name": "Bouffon Vert / Green Goblin",
+            "imgPath": "assets/img/superheros/33_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 34,
+            "name": "Doctor Octopus",
+            "imgPath": "assets/img/superheros/34_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 35,
+            "name": "Captain Carter",
+            "imgPath": "assets/img/superheros/35_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 36,
+            "name": "Mysterio",
+            "imgPath": "assets/img/superheros/36_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 37,
+            "name": "Wong",
+            "imgPath": "assets/img/superheros/37_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 38,
+            "name": "Aquaman",
+            "imgPath": "assets/img/superheros/38_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 39,
+            "name": "Carnage",
+            "imgPath": "assets/img/superheros/39_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 40,
+            "name": "Wonder Woman",
+            "imgPath": "assets/img/superheros/40_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 41,
+            "name": "Venom 2007",
+            "imgPath": "assets/img/superheros/41_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 42,
+            "name": "Black Spiderman",
+            "imgPath": "assets/img/superheros/42_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 43,
+            "name": "La Guêpe / The Wasp",
+            "imgPath": "assets/img/superheros/43_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 44,
+            "name": "Loki",
+            "imgPath": "assets/img/superheros/44_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 45,
+            "name": "Corvus Glaive",
+            "imgPath": "assets/img/superheros/45_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 46,
+            "name": "Ebony Maw",
+            "imgPath": "assets/img/superheros/46_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 47,
+            "name": "Proxima Midnight",
+            "imgPath": "assets/img/superheros/47_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 48,
+            "name": "Green Lantern",
+            "imgPath": "assets/img/superheros/48_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 49,
+            "name": "Deadpool Origin",
+            "imgPath": "assets/img/superheros/49_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 50,
+            "name": "Lady Deathstrike",
+            "imgPath": "assets/img/superheros/50_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 51,
+            "name": "Yondu Udonta",
+            "imgPath": "assets/img/superheros/51_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 52,
+            "name": "Mantis",
+            "imgPath": "assets/img/superheros/52_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 53,
+            "name": "Super Bébé",
+            "imgPath": "assets/img/superheros/53_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 54,
+            "name": "Dardevil",
+            "imgPath": "assets/img/superheros/54_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 55,
+            "name": "Abomination",
+            "imgPath": "assets/img/superheros/55_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 56,
+            "name": "Yao",
+            "imgPath": "assets/img/superheros/56_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 57,
+            "name": "Kaecilius",
+            "imgPath": "assets/img/superheros/57_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 58,
+            "name": "Shang-Chi",
+            "imgPath": "assets/img/superheros/58_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 59,
+            "name": "Falcon",
+            "imgPath": "assets/img/superheros/59_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 60,
+            "name": "Cyclope",
+            "imgPath": "assets/img/superheros/60_11zon.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 74,
+            "name": "Jean Grey",
+            "imgPath": "assets/img/superheros/74.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 75,
+            "name": "Magneto",
+            "imgPath": "assets/img/superheros/75.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 76,
+            "name": "Professeur Charles Xavier",
+            "imgPath": "assets/img/superheros/76.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 77,
+            "name": "Mystique",
+            "imgPath": "assets/img/superheros/77.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 78,
+            "name": "Tornade / Storm",
+            "imgPath": "assets/img/superheros/78.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 79,
+            "name": "Malicia",
+            "imgPath": "assets/img/superheros/79.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 80,
+            "name": "Diablo",
+            "imgPath": "assets/img/superheros/80.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 81,
+            "name": "Deku",
+            "imgPath": "assets/img/superheros/81.jpg",
+            "type": "superhero"
+        },
+        {
+            "id": 61,
+            "name": "Marteau de Thor",
+            "imgPath": "assets/img/superheros/mjolnir_11zon.jpg",
+            "type": "artefact"
+        },
+        {
+            "id": 62,
+            "name": "Lasso de vérité de Wonder Woman",
+            "imgPath": "assets/img/superheros/lasso_11zon.jpg",
+            "type": "artefact"
+        },
+        {
+            "id": 63,
+            "name": "Batarang de Batman",
+            "imgPath": "assets/img/superheros/batarang_11zon.jpg",
+            "type": "artefact"
+        },
+        {
+            "id": 64,
+            "name": "Bague de Green Lantern",
+            "imgPath": "assets/img/superheros/powerring_11zon.jpg",
+            "type": "artefact"
+        },
+        {
+            "id": 65,
+            "name": "Gant de Thanos",
+            "imgPath": "assets/img/superheros/gauntlet_11zon.jpg",
+            "type": "artefact"
+        },
+        {
+            "id": 66,
+            "name": "Bouclier de Captain America",
+            "imgPath": "assets/img/superheros/captainamericashield_11zon.jpg",
+            "type": "artefact"
+        },
+        {
+            "id": 67,
+            "name": "Esprit",
+            "imgPath": "assets/img/superheros/mindstone_11zon.jpg",
+            "type": "infinitystone"
+        },
+        {
+            "id": 68,
+            "name": "Pouvoir",
+            "imgPath": "assets/img/superheros/powerstone_11zon.jpg",
+            "type": "infinitystone"
+        },
+        {
+            "id": 69,
+            "name": "Réalité",
+            "imgPath": "assets/img/superheros/realitystone_11zon.jpg",
+            "type": "infinitystone"
+        },
+        {
+            "id": 70,
+            "name": "Temps",
+            "imgPath": "assets/img/superheros/timestone_11zon.jpg",
+            "type": "infinitystone"
+        },
+        {
+            "id": 71,
+            "name": "Âme",
+            "imgPath": "assets/img/superheros/soulstone_11zon.jpg",
+            "type": "infinitystone"
+        },
+        {
+            "id": 72,
+            "name": "Espace",
+            "imgPath": "assets/img/superheros/spacestone_11zon.jpg",
+            "type": "infinitystone"
+        },
+        {
+            "id": 73,
+            "name": "Pierre Noire Légendaire",
+            "imgPath": "assets/img/superheros/blackdiamond_11zon.jpg",
+            "type": "infinitystone"
+        }
+    ]
+}
