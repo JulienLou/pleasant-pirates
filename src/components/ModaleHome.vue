@@ -83,9 +83,6 @@ export default {
   },
 
   methods : {
-    // playerIsOK(){
-    //   this.$emit("message-modal-home", "Yo Julien !");
-    // }
 
     freeMoney(){
       if(this.totalCoins == 0 && !localStorage.getItem("userTotalCoins")){
