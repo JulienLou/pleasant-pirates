@@ -5,18 +5,18 @@
       <h2>Mentions Légales</h2>
 
       <div class="container">
-        <p>Merci de lire avec attention les différentes modalités d’utilisation du présent site avant d’y parcourir ses pages. En vous connectant sur ce site, vous acceptez, sans réserves, les présentes modalités. Aussi, conformément à l’article n°6 de la Loi n°2004-575 du 21 Juin 2004 pour la confiance dans l’économie numérique, les responsables du présent site internet Pleasant Pirates www.pleasantpirates.com sont :</p>
+        <p>Merci de lire avec attention les différentes modalités d’utilisation du présent site/sous-domaine avant d’y parcourir ses pages. En vous connectant sur ce site/sous-domaine, vous acceptez, sans réserves, les présentes modalités. Aussi, conformément à l’article n°6 de la Loi n°2004-575 du 21 Juin 2004 pour la confiance dans l’économie numérique, les responsables du présent site internet Pleasant Pirates www.pleasantpirates.julienlouvet.com sont :</p>
       
         <h3>Éditeur du Site et développement : </h3>
         <p>Julien Louvet</p>
-        <p>Site web : www.julienlouvet.com</p>
+        <p>Site web : <a class="cursor-pointer color-yellow" href="https://julienlouvet.com/" target="_blank">www.julienlouvet.com</a></p>
 
         <h3>Conditions d’utilisation : </h3>
-        <p>Ce site (www.pleasantpirates.com) est proposé en différents langages web (VueJS3, HTML5, Javascript, CSS, etc…) pour un meilleur confort d’utilisation et un graphisme plus agréable.</p>
+        <p>Ce site/sous-domaine (www.pleasantpirates.julienlouvet.com) est proposé en différents langages web (VueJS3, HTML5, Javascript, CSS, etc…) pour un meilleur confort d’utilisation et un graphisme plus agréable.</p>
         <p>Nous vous recommandons de recourir à des navigateurs modernes comme Firefox, Google Chrome, Edge, Safari etc…</p>
 
         <h3>Cookies :</h3>
-        <p>Le site www.pleasantpirates.com peut-être amené à vous demander l’acceptation des cookies pour des besoins de statistiques et d’affichage. Un cookie est une information déposée sur votre disque dur par le serveur du site que vous visitez. Il contient plusieurs données qui sont stockées sur votre ordinateur dans un simple fichier texte auquel un serveur accède pour lire et enregistrer des informations . Certaines parties de ce site ne peuvent être fonctionnelles sans l’acceptation de cookies.</p>
+        <p>Le site/sous-domaine www.pleasantpirates.julienlouvet.com peut-être amené à vous demander l’acceptation des cookies pour des besoins de statistiques et d’affichage. Un cookie est une information déposée sur votre disque dur par le serveur du site que vous visitez. Il contient plusieurs données qui sont stockées sur votre ordinateur dans un simple fichier texte auquel un serveur accède pour lire et enregistrer des informations . Certaines parties de ce site/sous-domaine ne peuvent être fonctionnelles sans l’acceptation de cookies.</p>
 
         <h3>Liens hypertextes :</h3>
         <p>Les sites internet de peuvent offrir des liens vers d’autres sites internet ou d’autres ressources disponibles sur Internet. Pleasant Pirates ne dispose d’aucun moyen pour contrôler les sites en connexion avec ses sites internet.</p>
@@ -30,11 +30,11 @@
         <p>Les liens hypertextes mis en place dans le cadre du présent site internet en direction d’autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de Pleasant Pirates et de son auteur.</p>
 
         <h3>Propriété intellectuelle :</h3>
-        <p>Tout le contenu du présent site www.pleasantpirates, incluant, de façon non limitative, les graphismes, textes, animations, logos ainsi que leur mise en forme sont la propriété exclusive de son auteur à l’exception des images, vidéos, sons, gifs et icônes ou contenus appartenant à d’autres sociétés partenaires ou auteurs.</p>
+        <p>Tout le contenu du présent site www.pleasantpirates.julienlouvet.com, incluant, de façon non limitative, les graphismes, textes, animations, logos ainsi que leur mise en forme sont la propriété exclusive de son auteur à l’exception des images, vidéos, sons, gifs et icônes ou contenus appartenant à d’autres sociétés partenaires ou auteurs.</p>
 
         <h3>Données personnelles :</h3>
-        <p>De manière générale, vous n’êtes pas tenu de nous communiquer vos données personnelles lorsque vous visitez notre site Internet www.pleasntpiartes.com.</p>
-        <p>Cependant, ce principe comporte certaines exceptions. En effet, pour certains services proposés par notre site, vous pouvez être amenés à nous communiquer certaines données telles que : votre nom, votre fonction, le nom de votre société, votre adresse électronique, et votre numéro de téléphone. Tel est le cas lorsque vous remplissez le formulaire qui vous est proposé en ligne, dans la rubrique « contact » sur www.julienlouvet.com</p>
+        <p>De manière générale, vous n’êtes pas tenu de nous communiquer vos données personnelles lorsque vous visitez notre site/sous-domaine internet www.pleasantpirates.julienlouvet.com.</p>
+        <p>Cependant, ce principe comporte certaines exceptions. En effet, pour certains services proposés par notre site/sous-domaine, vous pouvez être amenés à nous communiquer certaines données telles que : votre nom, votre fonction, le nom de votre société, votre adresse électronique, et votre numéro de téléphone. Tel est le cas lorsque vous remplissez le formulaire qui vous est proposé en ligne, dans la rubrique « contact » sur www.julienlouvet.com</p>
         <p>Dans tous les cas, vous pouvez refuser de fournir vos données personnelles. Dans ce cas, vous ne pourrez pas utiliser tout les services du site, notamment celui de solliciter des renseignements, ou de recevoir les lettres d’information.</p>
         <p>Enfin, nous pouvons collecter de manière automatique certaines informations vous concernant lors d’une simple navigation sur notre site internet, notamment : des informations concernant l’utilisation de notre site, comme les zones que vous visitez et les services auxquels vous accédez, votre adresse IP, le type de votre navigateur, vos temps d’accès.</p>
         <p>De telles informations sont utilisées exclusivement à des fins de statistiques internes, de manière à améliorer la qualité des services qui vous sont proposés. Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.</p>

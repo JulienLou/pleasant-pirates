@@ -164,6 +164,10 @@ body::-webkit-scrollbar-thumb{
     flex-wrap: wrap;
   }
 
+  .color-yellow{
+    color: var(--yellowpirates)
+  }
+
   .track-player-container{
     //display: none;
     position: relative;

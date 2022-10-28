@@ -363,7 +363,7 @@ export default {
         while(this.roller1[randomItem].id == this.mostWantedItem.id);
         this.mostWantedItem = this.roller1[randomItem];
       }
-      console.log(this.roller1[randomItem].id +'|'+ this.mostWantedItem.id);
+
       imgMwi.style.backgroundImage = `url(${require('@/'+ this.roller1[randomItem].imgPath)})`; 
       imgMwi.style.backgroundSize = '70%';
       imgMwi.style.backgroundRepeat = 'no-repeat';
@@ -1097,7 +1097,7 @@ export default {
   }
 
   .jackpot-game{
-    margin-top: 2rem;
+    margin-top: 1rem;
 
     .message-nomoney{
       position: relative;
@@ -1220,7 +1220,7 @@ export default {
         
         .frame-background{
           position: relative;
-          margin: 4.5rem;
+          margin: 1.5rem;
   
           .frame{
             position: relative;
