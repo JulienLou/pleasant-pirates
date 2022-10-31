@@ -1,5 +1,5 @@
 <template>
-
+  <SpinnerLoader :isLoaded="isLoaded" />
   <div :class="templateColorChoice">
     <NavbarSide/>
     <div class="navbar-margin">
@@ -39,17 +39,20 @@
 </template>
 
 <script>
+import SpinnerLoader from '@/components/SpinnerLoader.vue';
 import NavbarSide from '@/components/NavbarSide.vue'
 import FooterMain from "@/components/FooterMain.vue";
 
 export default {
   name: "AboutView",
   components:{
+    SpinnerLoader,
     NavbarSide,
     FooterMain
   },
   data(){
     return{
+      isLoaded: false,
       templateColorChoice: "template-blue",
     }
   },
@@ -59,6 +62,12 @@ export default {
       this.templateColorChoice = localStorage.getItem("userThemeColor");
     }
 
+    // Loader Page
+    const self = this;
+    setTimeout(()=>{
+        self.isLoaded = true;
+    }, 50);
+    
   },
 }
 </script>

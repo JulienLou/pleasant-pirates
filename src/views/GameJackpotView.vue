@@ -1,4 +1,5 @@
 <template>
+  <SpinnerLoader :isLoaded="isLoaded" />
   <div :class="templateColorChoice">
     <section class="jackpot">
       <NavbarSide/>
@@ -193,6 +194,7 @@
 </template>
 
 <script>
+import SpinnerLoader from '@/components/SpinnerLoader.vue';
 import NavbarSide from '@/components/NavbarSide.vue';
 import jsonjackpot from '@/json/jackpot.json';
 import CannonBall from '@/components/CannonBall.vue';
@@ -203,6 +205,7 @@ export default {
 
   name: 'GameJackpotView',
   components: {
+    SpinnerLoader,
     NavbarSide,
     CannonBall,
     SetVolumeFx,
@@ -211,6 +214,7 @@ export default {
 
   data(){
     return{
+      isLoaded: false,
       revele: false,
       deleteOptionsVisible: false,
 
@@ -296,6 +300,12 @@ export default {
     // Infos player totalcoins
     const counterDom = document.querySelector('.player-counter-coins');
     counterDom.innerHTML = this.totalCoins;
+
+    // Loader Page
+    const self = this;
+    setTimeout(()=>{
+        self.isLoaded = true;
+    }, 100);
   },
 
   watch: {

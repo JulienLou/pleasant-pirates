@@ -18,27 +18,27 @@ const routes = [
   {
     path: '/MemoryGame',
     name: 'MemoryGame',
-    component: () => import('../views/GameMemoryView.vue')
+    component: () => import(/* webpackChunkName: "MemoryGame" */ '../views/GameMemoryView.vue')
   },
   {
     path: '/SlideGame',
     name: 'SlideGame',
-    component: () => import('../views/GameSlideView.vue')
+    component: () => import(/* webpackChunkName: "SlideGame" */ '../views/GameSlideView.vue')
   },
   {
     path: '/JackpotGame',
     name: 'JackpotGame',
-    component: () => import('../views/GameJackpotView.vue')
+    component: () => import(/* webpackChunkName: "JackpotGame" */ '../views/GameJackpotView.vue')
   },
   {
     path: '/Scores',
     name: 'ScoresPage',
-    component: () => import('../views/ScoresView.vue')
+    component: () => import(/* webpackChunkName: "ScoresPage" */ '../views/ScoresView.vue')
   },
   {
     path: '/Policy',
     name: 'MentionsLégales',
-    component: () => import('../views/PolicyView.vue')
+    component: () => import(/* webpackChunkName: "MentionsLégales" */ '../views/PolicyView.vue')
   }
 ]
 

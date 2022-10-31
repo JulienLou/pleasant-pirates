@@ -1,5 +1,9 @@
 <template>
-    <div v-if="!isloaded" class="spinner-container">
+    
+    <!-- <div v-show="!isLoaded" class="spinner-container">
+        <div class="lds-dual-ring"></div>
+    </div> -->
+    <div :class="{loadedPage : isLoaded}" class="spinner-container">
         <div class="lds-dual-ring"></div>
     </div>
     <!-- <div class="spinner-menu">
@@ -12,35 +16,32 @@
 
 <script>
 export default {
-    data(){
-        return{
-            isloaded: false
-        }
-    },
-    mounted() {
-        
-        document.onreadystatechange = () => {
-            if (document.readyState == "complete") { 
-                // setTimeout(()=>{
-                    this.isloaded = true;
-                //},200);
-            }
-        }
-    }
+    props: ['isLoaded'],
 }
 </script>
 
 <style scoped>
 .spinner-container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    overflow: hidden;
-    background-color: var(--black);
-    z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--black);
+  z-index: 10000;
+  transition-property: opacity, height;
+  transition-duration: .3s, 0s;
+  transition-delay: 0s, .3s;
+}
+
+.loadedPage{
+  opacity: 0;
+  height: 0;
 }
 
 /* .spinner-menu{

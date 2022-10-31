@@ -1,4 +1,5 @@
 <template>
+  <SpinnerLoader :isLoaded="isLoaded" />
   <div :class="templateColorChoice">
     <NavbarSide />
     <section class="scores">
@@ -156,18 +157,21 @@
 </template>
 
 <script>
+import SpinnerLoader from '@/components/SpinnerLoader.vue';
 import NavbarSide from "@/components/NavbarSide.vue";
 import FooterMain from "@/components/FooterMain.vue";
 
 export default {
   name: "ScoresPage",
   components: {
+    SpinnerLoader,
     NavbarSide,
     FooterMain
   },
 
   data() {
     return {
+      isLoaded: false,
       templateColorChoice: "template-blue",
       bestsScoresMemory: {},
       bestsScoresSlide: {},
@@ -206,6 +210,11 @@ export default {
     if (localStorage.getItem("userTotalCoins")) {
       this.totalCoins = Number(localStorage.getItem("userTotalCoins"));
     }
+    // Loader Page
+    const self = this;
+    setTimeout(()=>{
+        self.isLoaded = true;
+    }, 50);
   },
 
   methods: {

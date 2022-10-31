@@ -1,4 +1,5 @@
 <template>
+  <SpinnerLoader :isLoaded="isLoaded" />
   <div :class="templateColorChoice">
     <div id="memory-game">
       
@@ -208,6 +209,7 @@
 </template>
 
 <script>
+import SpinnerLoader from '@/components/SpinnerLoader.vue';
 import NavbarSide from "@/components/NavbarSide.vue";
 import json from '@/json/piratesitems.json';
 import FlipingCoins from '@/components/FlipingCoins.vue';
@@ -217,6 +219,7 @@ import FooterMain from "@/components/FooterMain.vue";
 export default {
   name: "GameMemoryView",
   components: {
+    SpinnerLoader,
     NavbarSide,
     FlipingCoins,
     SetVolumeFx,
@@ -225,6 +228,7 @@ export default {
 
   data() {
     return {
+      isLoaded: false,
       revele: false,
       array: json,
       templateColorChoice: "template-blue",
@@ -683,6 +687,12 @@ export default {
     if (localStorage.getItem("volumeEffects")) {
       this.valueVolumeFx = Number(localStorage.getItem("volumeEffects"));
     }
+
+    // Loader Page
+    const self = this;
+    setTimeout(()=>{
+        self.isLoaded = true;
+    }, 100);
   },
 };
 </script>

@@ -1,4 +1,5 @@
 <template>
+  <SpinnerLoader :isLoaded="isLoaded" />
   <div :class="templateColorChoice">
     <NavbarSide/>
     <div id="slide-game">
@@ -90,7 +91,7 @@
               </div>
             </div>
             <div class="dashboard" v-if="startTimer == false">
-              <button class="btn-custom btn-solid-white" @click="this.imageChosenByUser = null">Choix aléatoire</button>
+              <button class="btn-custom btn-solid-white" @click="this.imageChosenByUser = null, this.playSound(this.soundChangeHero)">Choix aléatoire</button>
               <button class="btn-custom btn-solid-green" @click="startGame()">Commencer</button>
             </div>
             <div class="dashboard" v-else>
@@ -180,6 +181,7 @@
 </template>
 
 <script>
+import SpinnerLoader from '@/components/SpinnerLoader.vue';
 import NavbarSide from '@/components/NavbarSide.vue';
 import json from '@/json/piratesitems.json';
 import FlipingCoins from '@/components/FlipingCoins.vue';
@@ -189,6 +191,7 @@ import FooterMain from "@/components/FooterMain.vue";
 export default {
   name: 'GameSlideView',
   components: {
+    SpinnerLoader,
     NavbarSide,
     FlipingCoins,
     SetVolumeFx,
@@ -197,6 +200,7 @@ export default {
 
   data(){
     return {
+      isLoaded: false,
       revele: false,
       arrayAllItems: json,
       templateColorChoice: "template-blue",
@@ -299,6 +303,12 @@ export default {
     if (localStorage.getItem("volumeEffects")) {
       this.valueVolumeFx = Number(localStorage.getItem("volumeEffects"));
     }
+
+    // Loader Page
+    const self = this;
+    setTimeout(()=>{
+        self.isLoaded = true;
+    }, 50);
   },
     
 
@@ -850,7 +860,6 @@ export default {
     },
 
     restartGame(){
-      this.playSound(this.soundChangeHero);
       document.querySelector(".fireworks").style.display = "none";
       this.resetGame();
       this.openNewGame(this.level);

@@ -1,5 +1,5 @@
 <template>
-  
+  <SpinnerLoader :isLoaded="isLoaded" />
   <div class="home">
     <video autoplay="autoplay" muted="" loop src="../assets/img/wallpaper/shipday-animated1.mp4"></video>
 
@@ -97,6 +97,7 @@
 </template>
 
 <script>
+import SpinnerLoader from '@/components/SpinnerLoader.vue';
 import ModaleHome from "@/components/ModaleHome.vue";
 import FooterMain from "@/components/FooterMain.vue";
 import VanillaTiltVue from "vanilla-tilt-vue";
@@ -104,24 +105,36 @@ import VanillaTiltVue from "vanilla-tilt-vue";
 export default {
   name: 'HomeView',
   components: {
+    SpinnerLoader,
     ModaleHome,
     FooterMain,
     Tilt : VanillaTiltVue
   },
   data(){
     return{
+      isLoaded: false,
       reveleModaleHome: true,
       templateColorChoice: "template-blue",
       optionsTilt : {glare : true, "max-glare" : 1}
     }
   },
   mounted(){
+    // Theme Color
     if (localStorage.getItem("userThemeColor")) {
       this.templateColorChoice = localStorage.getItem("userThemeColor");
     }
+
+    // Modal Home Welcome
     if (localStorage.getItem("showModaleHome")) {
       this.reveleModaleHome = JSON.parse(localStorage.getItem("showModaleHome"));
     }
+
+    // Loader Page
+    const self = this;
+    setTimeout(()=>{
+        self.isLoaded = true;
+    }, 50);
+
   },
   methods: {
     toggleModaleHome(){

@@ -1,7 +1,13 @@
 <template>
  <!-- <SpinnerLoader /> -->
   <MusicPlayer/>
-  <router-view/>
+  <router-view v-slot="{ Component, route }">
+    <transition name="fade" mode="out-in">
+      <div :key="route.name">
+        <component :is="Component" />
+      </div>
+    </transition>
+  </router-view>
 </template>
 
 <script>
@@ -101,13 +107,23 @@ body::-webkit-scrollbar-track{
 body::-webkit-scrollbar-thumb{
   background: var(--ordamedium1);
 }
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active{
+  transition: opacity .2s ease-out;
+}
   
 #app {
   // font-family: 'Cinzel', serif;
   // font-family: 'Rubik', sans-serif;
   // font-family: 'Luckiest Guy', cursive;
   // font-family: 'Pirata One', cursive;
-  background-color: var(--black44);
+  background-color: var(--black);
   font-family: 'Rubik', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
