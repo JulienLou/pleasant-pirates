@@ -248,9 +248,9 @@ export default {
       gameIsPlayingAnimation : false, // a break moment to lauch winning animations
 
       valueVolumeFx: 10,
-      soundStartRollers: require("../assets/sounds/jackpot/machine/startrollers3.mp3"),
+      soundStartRollers: require("../assets/sounds/jackpot/machine/startrollers.mp3"),
       soundStopRoller: require("../assets/sounds/jackpot/machine/stoproller.mp3"),
-      soundStartRollersSingle: require("../assets/sounds/jackpot/machine/startrollersingle2.mp3"),
+      soundStartRollersSingle: require("../assets/sounds/jackpot/machine/startrollersingle.mp3"),
       soundSword1: require("../assets/sounds/jackpot/alerts/sword1.mp3"),
       soundSword2: require("../assets/sounds/jackpot/alerts/sword2.mp3"),
       soundSwing: require("../assets/sounds/jackpot/alerts/swing.mp3"),

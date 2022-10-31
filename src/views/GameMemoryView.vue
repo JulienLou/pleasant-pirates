@@ -62,7 +62,7 @@
                 <div class="bravo">
                   <div v-if="points > 0">
                     <p>Félicitations !</p>
-                    <div class="fliping-coins-container">
+                    <div class="fliping-coins-container d-flex justify-content-center">
                       <FlipingCoins :lgc="this.lastGameCoins"/>
                     </div>
                     <p v-if="newRecord" class="animate__animated animate__pulse animate__infinite infinite">NOUVEAU RECORD !</p>
@@ -264,7 +264,7 @@ export default {
       bestScoreL20: 0,
       bestScoreL24: 0,
       valueVolumeFx: 10,
-      soundCard: require("../assets/sounds/memory/card1.mp3"),
+      soundCard: require("../assets/sounds/global/clicksound.mp3"),
       soundCardPair: require("../assets/sounds/memory/cardpair.mp3"),
       soundWin: require("../assets/sounds/global/userwin1.mp3"),
       soundReset: require("../assets/sounds/global/resetgame.mp3"),

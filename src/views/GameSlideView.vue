@@ -226,7 +226,7 @@ export default {
       bestScoreL4: 0,
       bestScoreL5: 0,
       valueVolumeFx: 10,
-      soundTile: require("../assets/sounds/slide/tilemove.mp3"),
+      soundTile: require("../assets/sounds/global/clicksound.mp3"),
       soundChangeHero: require("../assets/sounds/slide/changehero.mp3"),
       soundWin: require("../assets/sounds/global/userwin1.mp3"),
       soundReset: require("../assets/sounds/global/resetgame.mp3"),
