@@ -69,7 +69,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .policy{
   min-height: 100vh;
   text-align: start;

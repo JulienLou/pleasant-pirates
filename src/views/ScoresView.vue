@@ -233,7 +233,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .scores {
   background: url("../assets/img/wallpaper/scorespage.jpg") no-repeat center
     fixed;

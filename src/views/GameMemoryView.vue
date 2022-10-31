@@ -697,7 +697,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #memory-game {
   position: relative;
   min-height: 100vh;

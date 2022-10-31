@@ -67,12 +67,12 @@ export default {
     setTimeout(()=>{
         self.isLoaded = true;
     }, 50);
-    
+
   },
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .about{
   background: url('../assets/img/wallpaper/mg3.jpg') no-repeat center fixed;
   background-size: cover;
