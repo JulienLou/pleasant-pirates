@@ -884,17 +884,6 @@ export default {
   font-size: 1em;
   padding-bottom: 30px;
 
-  .btn-options-container{
-    position: fixed;
-    bottom: 25px;
-    right: 125px;
-    z-index: 1;
-
-    .btn-option-set:hover{
-      cursor: pointer;
-    }
-  }
-
   .game-container{
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.7);
@@ -919,8 +908,8 @@ export default {
         line-height: 1.4em;
         border-radius: 5px;
         border: 2px solid var(--grey99);
-        background-color: #313131;
-        color: white;
+        background-color: var(--black31);
+        color: var(--white);
 
         .element-config{
           padding: 0 10px;
@@ -930,50 +919,6 @@ export default {
           }
         }
       }
-
-      .fireworks {
-        position: absolute;
-        z-index: 99999;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        background-color: rgba($color: #010101, $alpha: 0.8);
-        overflow: hidden;
-        border-radius: 18px;
-
-        .bravo-container {
-          position: relative;
-          display: flex;
-          justify-content: center;
-        }
-
-        .bravo {
-          position: absolute;
-          top: 50px;
-          color: var(--white);
-          font-weight: bold;
-          font-size: 2.5em;
-          margin: 5px 0;
-          background: url('../assets/img/wallpaper/laurier.png') no-repeat;
-          background-position: bottom;
-          background-size: contain;
-
-          .b-score{
-            font-size: 1rem;
-            margin-right: .3rem;
-          }
-          .b-points{
-            font-size: 2.5em;
-          }
-
-          button{
-            margin-top: 1rem;
-          }
-        }
-      }
-
 
       .puzzle-wintess-container{
         .puzzle-table{
@@ -1010,7 +955,6 @@ export default {
                 content: '';
                 width: 100%;
                 height: 100%;
-                //background-color: #00000000;
                 transition: .1s;
               }
 
@@ -1057,7 +1001,6 @@ export default {
           }
         }
     
-
         .witness-container{
           margin: 8px;
 
@@ -1080,8 +1023,6 @@ export default {
           }
         }
 
-        
-        
       }
 
       .dashboard{

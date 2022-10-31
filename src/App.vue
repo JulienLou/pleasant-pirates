@@ -184,12 +184,22 @@ body::-webkit-scrollbar-thumb{
     color: var(--yellowpirates)
   }
 
-  .track-player-container{
-    //display: none;
-    position: relative;
-    width: 100vh;
-    height: 100vh;
-    overflow: hidden;
+  // .track-player-container{
+  //   position: relative;
+  //   width: 100vh;
+  //   height: 100vh;
+  //   overflow: hidden;
+  // }
+
+  .btn-options-container{
+    position: fixed;
+    bottom: 25px;
+    right: 125px;
+    z-index: 1;
+
+    .btn-option-set:hover{
+      cursor: pointer;
+    }
   }
 
   h1{
@@ -261,6 +271,49 @@ body::-webkit-scrollbar-thumb{
 
     i{
       font-size: 1.2rem;
+    }
+  }
+
+  .fireworks {
+    position: absolute;
+    z-index: 99999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: rgba($color: #010101, $alpha: 0.8);
+    overflow: hidden;
+    border-radius: 18px;
+
+    .bravo-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+
+    .bravo {
+      position: absolute;
+      top: 50px;
+      color: var(--white);
+      font-weight: bold;
+      font-size: 2.5em;
+      margin: 5px 0;
+      background: url('@/assets/img/wallpaper/laurier.png') no-repeat;
+      background-position: bottom;
+      background-size: contain;
+
+      .b-score{
+        font-size: 1rem;
+        margin-right: .3rem;
+      }
+      .b-points{
+        font-size: 2.5em;
+      }
+
+      button{
+        margin-top: 1rem;
+      }
     }
   }
 

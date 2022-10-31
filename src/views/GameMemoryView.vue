@@ -704,18 +704,6 @@ export default {
   background: transparent;
   z-index: 1;
 
-  .btn-options-container{
-    position: fixed;
-    bottom: 25px;
-    right: 125px;
-    z-index: 201;
-
-    .btn-option-set:hover{
-      cursor: pointer;
-    }
-  }
-
-
   video{
     position: fixed;
     top: 0;
@@ -728,7 +716,6 @@ export default {
   .game-container {
     border-radius: 5px;
     animation: .2s linear slidein;
-    // width: fit-content;
     margin-top: .7rem;
 
     .config{
@@ -740,8 +727,8 @@ export default {
       margin-bottom: 10px;
       border-radius: 5px;
       border: 2px solid var(--grey99);
-      background-color: #313131;
-      color: white;
+      background-color: var(--black31);
+      color: var(--white);
       padding: 3px;
       
 
@@ -760,52 +747,6 @@ export default {
           .best-score-level{
             font-size: 1.2em;
           }
-        }
-      }
-    }
-
-    .fireworks {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 1;
-      background-color: rgba($color: #010101, $alpha: 0.8);
-      overflow: hidden;
-
-      .bravo-container {
-        position: relative;
-        display: flex;
-        justify-content: center;
-      }
-
-      .bravo {
-        position: absolute;
-        top: 50px;
-        color: white;
-        font-weight: bold;
-        font-size: 2.5em;
-        margin: 5px 0;
-        background: url('../assets/img/wallpaper/laurier.png') no-repeat;
-        background-position: bottom;
-        background-size: contain;
-
-        .fliping-coins-container{
-          display: flex;
-          justify-content: center;
-        }
-
-        .b-score{
-          font-size: 1rem;
-          margin-right: .3rem;
-        }
-        .b-points{
-          font-size: 2.5em;
-        }
-
-        button{
-          margin-top: 1rem;
         }
       }
     }

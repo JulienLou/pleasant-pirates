@@ -1086,17 +1086,6 @@ export default {
   position: relative;
   height: 100vh;
 
-  .btn-options-container{
-    position: fixed;
-    bottom: 25px;
-    right: 125px;
-    z-index: 201;
-
-    .btn-option-set:hover{
-      cursor: pointer;
-    }
-  }
-
   video{
     position: fixed;
     top: -22px;
