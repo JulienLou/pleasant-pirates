@@ -305,7 +305,7 @@ export default {
     const self = this;
     setTimeout(()=>{
         self.isLoaded = true;
-    }, 100);
+    }, 700);
   },
 
   watch: {
