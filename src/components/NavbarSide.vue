@@ -78,7 +78,7 @@ export default {
   position: fixed;
   transition: .3s ease-in-out;
   overflow: hidden;
-  z-index: 100;
+  z-index: 101;
 
   .arrow-burger{
     display: none;

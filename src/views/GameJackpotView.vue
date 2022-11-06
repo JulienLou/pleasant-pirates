@@ -19,7 +19,7 @@
 
         <div class="container jackpot-game">
           <div class="message-nomoney" v-show="(this.totalCoins <= 0 && this.playerIsPlaying == false)">
-            <p class="animate__animated animate__pulse animate__infinite infinite">Pour jouer au jackpot, vous devez gagnez des crédits en jouant aux autres jeux...</p>
+            <p>Pour jouer au jackpot, vous devez gagnez des crédits en jouant aux autres jeux...</p>
           </div>
           <div class="game-container">
             
@@ -353,12 +353,14 @@ export default {
     defineNbItemsRandomInRoller(NbItems){
       const missJane = this.arrayAllItems.jackpot[0];
       const captainB = this.arrayAllItems.jackpot[1];
+      const treasure = this.arrayAllItems.jackpot[2];
       let arrayModel = this.arrayAllItems.jackpot.slice();
-      arrayModel.splice(0, 2);
+      arrayModel.splice(0, 3);
       let rollerToCut = this.arrayRandomize(arrayModel);
-      const nbItemsToRemove = rollerToCut.length - NbItems + 2;
+      const nbItemsToRemove = rollerToCut.length - NbItems + 3;
       rollerToCut.splice(rollerToCut.length - nbItemsToRemove, nbItemsToRemove);
-      rollerToCut.push(missJane, captainB);
+      rollerToCut.push(missJane, captainB, treasure);
+      this.shuffleArray(rollerToCut);
       return rollerToCut;
     },
 
@@ -407,9 +409,9 @@ export default {
       const self = this;  // no access to 'this' in a setInterval function.  
       let as = this.roller1;
       let count = 0;
-      let maxStep = this.getRandomInt(25, 38);
+      let maxStep = this.getRandomInt(30, 50);
       if(tries != 'firstTry'){
-        maxStep = this.getRandomInt(25, 40);
+        maxStep = this.getRandomInt(30, 50);
         this.playSound(this.soundStartRollersSingle);
         this.disabledAllRollerSingleBtn();
       }
@@ -459,9 +461,9 @@ export default {
       const self = this;
       let as = this.roller2;
       let count = 0;
-      let maxStep = this.getRandomInt(39, 55);
+      let maxStep = this.getRandomInt(51, 70);
       if(tries != 'firstTry'){
-        maxStep = this.getRandomInt(25, 40);
+        maxStep = this.getRandomInt(30, 50);
         this.playSound(this.soundStartRollersSingle);
         this.disabledAllRollerSingleBtn();
       }
@@ -512,9 +514,9 @@ export default {
       const self = this;
       let as = this.roller3;
       let count = 0;
-      let maxStep = this.getRandomInt(56, 72);
+      let maxStep = this.getRandomInt(72, 90);
       if(tries != 'firstTry'){
-        maxStep = this.getRandomInt(25, 40);
+        maxStep = this.getRandomInt(30, 50);
         this.playSound(this.soundStartRollersSingle);
         this.disabledAllRollerSingleBtn();
       }
@@ -570,6 +572,14 @@ export default {
         l = l - 1;
       }
       return a;
+    },
+
+    shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
     },
 
     checkLinesWin(t, m, b, ts, bs, playTries){
@@ -818,57 +828,61 @@ export default {
 
       if(winDirection == 'byTopDiag'){
         fc1.classList.add('active');
-        fc2.classList.add('greyed');
-        fc3.classList.add('greyed');
-        fc4.classList.add('greyed');
         fc5.classList.add('active');
-        fc6.classList.add('greyed');
-        fc7.classList.add('greyed');
-        fc8.classList.add('greyed');
         fc9.classList.add('active');
+
+        s2.classList.add('greyed');
+        s3.classList.add('greyed');
+        s4.classList.add('greyed');
+        s6.classList.add('greyed');
+        s7.classList.add('greyed');
+        s8.classList.add('greyed');
         s1.classList.add('activeSizeWin');
         s5.classList.add('activeSizeWin');
         s9.classList.add('activeSizeWin');
 
       }
       else if(winDirection == 'byMid'){
-        fc1.classList.add('greyed');
-        fc2.classList.add('greyed');
-        fc3.classList.add('greyed');
         fc4.classList.add('active');
         fc5.classList.add('active');
         fc6.classList.add('active');
-        fc7.classList.add('greyed');
-        fc8.classList.add('greyed');
-        fc9.classList.add('greyed');
+
+        s1.classList.add('greyed');
+        s2.classList.add('greyed');
+        s3.classList.add('greyed');
+        s7.classList.add('greyed');
+        s8.classList.add('greyed');
+        s9.classList.add('greyed');
         s4.classList.add('activeSizeWin');
         s5.classList.add('activeSizeWin');
         s6.classList.add('activeSizeWin');
       }
       else if(winDirection == 'byBotDiag'){
-        fc1.classList.add('greyed');
-        fc2.classList.add('greyed');
         fc3.classList.add('active');
-        fc4.classList.add('greyed');
         fc5.classList.add('active');
-        fc6.classList.add('greyed');
         fc7.classList.add('active');
-        fc8.classList.add('greyed');
-        fc9.classList.add('greyed');
+
+        s1.classList.add('greyed');
+        s2.classList.add('greyed');
+        s4.classList.add('greyed');
+        s6.classList.add('greyed');
+        s8.classList.add('greyed');
+        s9.classList.add('greyed');
         s3.classList.add('activeSizeWin');
         s5.classList.add('activeSizeWin');
         s7.classList.add('activeSizeWin');
       }
       else if(winDirection == 'byBotStraight'){
-        fc1.classList.add('greyed');
-        fc2.classList.add('greyed');
-        fc3.classList.add('greyed');
-        fc4.classList.add('greyed');
-        fc5.classList.add('greyed');
-        fc6.classList.add('greyed');
         fc7.classList.add('active');
         fc8.classList.add('active');
         fc9.classList.add('active');
+
+        s1.classList.add('greyed');
+        s2.classList.add('greyed');
+        s3.classList.add('greyed');
+        s4.classList.add('greyed');
+        s5.classList.add('greyed');
+        s6.classList.add('greyed');
         s7.classList.add('activeSizeWin');
         s8.classList.add('activeSizeWin');
         s9.classList.add('activeSizeWin');
@@ -877,12 +891,13 @@ export default {
         fc1.classList.add('active');
         fc2.classList.add('active');
         fc3.classList.add('active');
-        fc4.classList.add('greyed');
-        fc5.classList.add('greyed');
-        fc6.classList.add('greyed');
-        fc7.classList.add('greyed');
-        fc8.classList.add('greyed');
-        fc9.classList.add('greyed');
+
+        s4.classList.add('greyed');
+        s5.classList.add('greyed');
+        s6.classList.add('greyed');
+        s7.classList.add('greyed');
+        s8.classList.add('greyed');
+        s9.classList.add('greyed');
         s1.classList.add('activeSizeWin');
         s2.classList.add('activeSizeWin');
         s3.classList.add('activeSizeWin');
@@ -909,25 +924,25 @@ export default {
       const s8    = document.querySelector(".s8");
       const s9    = document.querySelector(".s9");
 
-      fc1.classList.remove('greyed', 'active');
-      fc2.classList.remove('greyed', 'active');
-      fc3.classList.remove('greyed', 'active');
-      fc4.classList.remove('greyed', 'active');
-      fc5.classList.remove('greyed', 'active');
-      fc6.classList.remove('greyed', 'active');
-      fc7.classList.remove('greyed', 'active');
-      fc8.classList.remove('greyed', 'active');
-      fc9.classList.remove('greyed', 'active');
+      fc1.classList.remove('active');
+      fc2.classList.remove('active');
+      fc3.classList.remove('active');
+      fc4.classList.remove('active');
+      fc5.classList.remove('active');
+      fc6.classList.remove('active');
+      fc7.classList.remove('active');
+      fc8.classList.remove('active');
+      fc9.classList.remove('active');
 
-      s1.classList.remove('activeSizeWin');
-      s2.classList.remove('activeSizeWin');
-      s3.classList.remove('activeSizeWin');
-      s4.classList.remove('activeSizeWin');
-      s5.classList.remove('activeSizeWin');
-      s6.classList.remove('activeSizeWin');
-      s7.classList.remove('activeSizeWin');
-      s8.classList.remove('activeSizeWin');
-      s9.classList.remove('activeSizeWin');
+      s1.classList.remove('activeSizeWin', 'greyed');
+      s2.classList.remove('activeSizeWin', 'greyed');
+      s3.classList.remove('activeSizeWin', 'greyed');
+      s4.classList.remove('activeSizeWin', 'greyed');
+      s5.classList.remove('activeSizeWin', 'greyed');
+      s6.classList.remove('activeSizeWin', 'greyed');
+      s7.classList.remove('activeSizeWin', 'greyed');
+      s8.classList.remove('activeSizeWin', 'greyed');
+      s9.classList.remove('activeSizeWin', 'greyed');
     },
 
     payThePlayer(value, playerBet, multiplier){
@@ -1100,18 +1115,23 @@ export default {
 
     .message-nomoney{
       position: relative;
+      margin: 0 30px;
+      display: flex;
+      justify-content: center;
       p{
         position: absolute;
         z-index: 100;
         width: 100%;
-        top: 10px;
-        left: -8px;
-        scale: 0.9;
-        background-color: rgb(162, 46, 46);
+        top: 40px;
+        background-color: rgb(139, 66, 66);
+        border-radius: 8px;
+        border: 2px solid var(--white);
         color: var(--yellow);
         font-family: 'Cinzel', serif;
-        font-size: 1.6em;
+        font-size: 2em;
         padding: .4em;
+        box-shadow: 0 0 2px var(--white), 0 0 4px var(--white), 0 0 12px var(--white), 0 0 24px var(--white),;
+        animation: messageNoMoney 1s ease-in-out infinite;
       }
     }
 
@@ -1257,7 +1277,6 @@ export default {
                 margin-top: 1px;
       
                 .frame-case{
-                  color: var(--black44);
                   width: 96px;
                   height: 96px;
                 }
@@ -1280,10 +1299,6 @@ export default {
                 .fc3.active, .fc6.active, .fc9.active{
                   animation: winFrameCases 2s ease-out;
                   animation-delay: .3s;
-                }
-    
-                .frame-case.greyed{
-                  background-color: rgba(0, 0, 0, 0.7);
                 }
               }
             }
@@ -1311,6 +1326,7 @@ export default {
                     width: 100%;                
                     
                     .img-square{
+                      position: relative;
                       width: 96px;
                       height: 96px;
                       background: transparent;
@@ -1336,14 +1352,23 @@ export default {
                       transform-style: preserve-3d;
                       perspective: 1000px;
                       animation: squareSizeWin 2s linear;
-                      animation-delay: .1s;
-                      
+                      animation-delay: .1s;                    
                     }
                     .s5.activeSizeWin{
                       animation-delay: .2s;
                     }
                     .s3.activeSizeWin, .s6.activeSizeWin, .s9.activeSizeWin{
                       animation-delay: .3s;
+                    }
+
+                    .img-square.greyed::after{
+                      position: absolute;
+                      content: '';
+                      top: 0;
+                      left: 0;
+                      bottom: 0;
+                      right: 0;
+                      background-color: rgba(0, 0, 0, 0.7);
                     }
                   }
                 }
@@ -1550,6 +1575,12 @@ export default {
   0% { transform: scale(.9,.9); }
   50%   { transform: scale(1,1); }
   100% { transform: scale(.9,.9); }
+}
+
+@keyframes messageNoMoney {
+  0% { transform: scale(.97,.97); }
+  50%   { transform: scale(1,1); }
+  100% { transform: scale(.97,.97); }
 }
 
 @keyframes winSpecialWantedTextMultiplier {
@@ -1766,8 +1797,8 @@ export default {
                         height: 76px;
                       }
                       .img-square.lightersquare::after{
-                        width: 72px; 
-                        height: 72px;
+                        width: 70px; 
+                        height: 70px;
                       }
                     }
                   }

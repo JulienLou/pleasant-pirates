@@ -195,7 +195,7 @@ body::-webkit-scrollbar-thumb{
     position: fixed;
     bottom: 25px;
     right: 125px;
-    z-index: 1;
+    z-index: 251;
 
     .btn-option-set:hover{
       cursor: pointer;
@@ -541,13 +541,13 @@ body::-webkit-scrollbar-thumb{
 }
 
 .btn-solid-grey:disabled{
-  color: #383838;
+  color: #4f4f4f;
   background: -webkit-linear-gradient(top, #616161, #282828);
 }
 
 .btn-solid-grey:disabled:focus{
   background: -webkit-linear-gradient(top, #616161, #282828);
-  color: #383838;
+  color: #4f4f4f;
 }
 
 .btn-solid-red:focus::after, .btn-solid-grey:focus::after{
@@ -653,6 +653,7 @@ body::-webkit-scrollbar-thumb{
             color: var(--white);
             display: flex;
             align-items: center;
+            font-size: 1rem;
             i{
               font-size: 1.7rem;
               margin-right: .3rem;

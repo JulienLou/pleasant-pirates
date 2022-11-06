@@ -297,9 +297,9 @@ export default {
       if (this.level == 9) { 
         this.maxPairesSelect = 9;
         if(this.windowWidth <= 360){
-          this.imgCardWidth = 136;
+          this.imgCardWidth = 84;
         }else if(this.windowWidth <= 412 && this.windowWidth > 360){
-          this.imgCardWidth = Math.floor(this.windowWidth/2.5).toFixed(0);
+          this.imgCardWidth = Math.floor(this.windowWidth/3.5).toFixed(0);
         }else if(this.windowWidth >= 1920){
           this.imgCardWidth = 170;
         }else{
@@ -310,9 +310,9 @@ export default {
       } else if (this.level == 12) { 
         this.maxPairesSelect = 12;
         if(this.windowWidth <= 360){
-          this.imgCardWidth = 136;
+          this.imgCardWidth = 84;
         }else if(this.windowWidth <= 412 && this.windowWidth > 360){
-          this.imgCardWidth = Math.floor(this.windowWidth/2.5).toFixed(0);
+          this.imgCardWidth = Math.floor(this.windowWidth/3.5).toFixed(0);
         }else if(this.windowWidth >= 1920){
           this.imgCardWidth = 170;
         }else{
@@ -360,7 +360,7 @@ export default {
       } else {
         this.maxPairesSelect = 6; 
         if(this.windowWidth <= 360){
-          this.imgCardWidth = 136;
+          this.imgCardWidth = 84;
         }else if(this.windowWidth <= 412 && this.windowWidth > 360){
           this.imgCardWidth = Math.floor(this.windowWidth/2.5).toFixed(0);
         }else if(this.windowWidth >= 1220 && this.windowHeight >= 920){
@@ -641,9 +641,9 @@ export default {
 
     // Images Cards width
     if(this.windowWidth <= 360){
-      this.imgCardWidth = 136;
+      this.imgCardWidth = 84;
     }else if(this.windowWidth <= 412 && this.windowWidth > 360){
-      this.imgCardWidth = Math.floor(this.windowWidth/2.5).toFixed(0);
+      this.imgCardWidth = Math.floor(this.windowWidth/3.5).toFixed(0);
     }else if(this.windowWidth >= 1220 && this.windowHeight >= 920){
       this.imgCardWidth = 244;
     }else{
@@ -814,7 +814,7 @@ export default {
               .superhero-name {
                 position: absolute;
                 background-color: #0000008e;
-                color: white;
+                color: var(--white);
                 bottom: 1px;
                 left: 0;
                 -webkit-user-select: none;
@@ -884,9 +884,24 @@ export default {
     }
   }
 
-  #memory-game .game-container .fireworks .bravo{
-    font-size: 2rem;
-    text-align: center;
+  #memory-game .game-container{
+
+    .cards{
+      .fireworks .bravo{
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      .card{
+        margin: 1px;
+        border-width: 1px;
+
+        .card__front .card-body .img-container .superhero-name {
+          font-size: .5rem;
+          line-height: .5rem;
+        }
+      }
+    } 
   }
 }
 </style>

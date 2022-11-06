@@ -14,9 +14,9 @@
     },
     {
       "id": 3,
-      "name": "Barre de gouvernail",
-      "imgPath": "assets/img/jackpot/ship-steering-wheel.png",
-      "value" : 2
+      "name": "Coffre au trésor",
+      "imgPath": "assets/img/jackpot/chest.png",
+      "value" : 15
     },
     {
       "id": 4,
@@ -26,9 +26,9 @@
     },
     {
       "id": 5,
-      "name": "Coffre au trésor",
-      "imgPath": "assets/img/jackpot/chest.png",
-      "value" : 15
+      "name": "Barre de gouvernail",
+      "imgPath": "assets/img/jackpot/ship-steering-wheel.png",
+      "value" : 2
     },
     {
       "id": 6,
