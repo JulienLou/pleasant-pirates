@@ -16,7 +16,6 @@
           </div>
         </div>
 
-
         <div class="container jackpot-game">
           <div class="message-nomoney" v-show="(this.totalCoins <= 0 && this.playerIsPlaying == false)">
             <p>Pour jouer au jackpot, vous devez gagnez des crédits en jouant aux autres jeux...</p>
@@ -68,26 +67,32 @@
                   <div class="rollers">
                     <div class="roller-border">
                       <div class="roller roller-1" :class="rollersColor">
+                        <div class="top-roller-addition"></div>
                         <div class="isRolling"></div>
                         <div class="roll-case roll-case-top"><div class="img-square s1"></div></div>
                         <div class="roll-case roll-case-middle"><div class="img-square s4"></div></div>
                         <div class="roll-case roll-case-bottom"><div class="img-square s7"></div></div>
+                        <div class="bottom-roller-addition"></div>
                       </div>
                     </div>
                     <div class="roller-border">
                       <div class="roller roller-2" :class="rollersColor">
+                        <div class="top-roller-addition"></div>
                         <div class="isRolling"></div>
                         <div class="roll-case roll-case-top"><div class="img-square s2"></div></div>
                         <div class="roll-case roll-case-middle"><div class="img-square s5"></div></div>
                         <div class="roll-case roll-case-bottom"><div class="img-square s8"></div></div>
+                        <div class="bottom-roller-addition"></div>
                       </div>
                     </div>
                     <div class="roller-border">
                       <div class="roller roller-3" :class="rollersColor">
+                        <div class="top-roller-addition"></div>
                         <div class="isRolling"></div>
                         <div class="roll-case roll-case-top"><div class="img-square s3"></div></div>
                         <div class="roll-case roll-case-middle"><div class="img-square s6"></div></div>
                         <div class="roll-case roll-case-bottom"><div class="img-square s9"></div></div>
+                        <div class="bottom-roller-addition"></div>
                       </div>
                     </div>
                   </div>
@@ -238,11 +243,16 @@ export default {
       totalCoinsAncient: 0,
       totalCoins: 0,
       playerBet: 1,
-      playerCoinsGains : 0,
-      playerCoinsLoses : 0,
+      playerCoinsReference: 0,
+      playerCoinsGains: 0,
+      playerCoinsLoses: 0,
       playerStrokesWins: 0,
       playerStrokesLoses: 0,
+      specialWantedFound: 0,
+      specialWantedGains: 0,
+      specialWantedWin: 0,
       lastGains: 0,
+      bestGain: 0,
       maxChances: 2, // game setter (retry on 1 roller)
       playerTries: 0,
       gameIsPlayingAnimation : false, // a break moment to lauch winning animations
@@ -272,6 +282,21 @@ export default {
     // User Total Coins
     if (localStorage.getItem("userTotalCoins")) {
       this.totalCoins = Number(localStorage.getItem("userTotalCoins"));
+      this.playerCoinsReference = this.totalCoins;
+    }
+
+    // Best Scores
+    if(localStorage.getItem("jackpotBestsScores")){
+      this.bestsScores = JSON.parse(localStorage.getItem("jackpotBestsScores"));
+      this.playerCoinsGains = this.bestsScores.coinsWins;
+      this.playerCoinsLoses = this.bestsScores.coinsLoses;
+      this.specialWantedFound = this.bestsScores.specialWanted;
+      this.playerStrokesWins = this.bestsScores.spinsWins;
+      this.playerStrokesLoses = this.bestsScores.spinsLoses;
+      this.specialWantedGains = this.bestsScores.specialWantedGains;
+      this.specialWantedWin = this.bestsScores.specialWantedWin;
+      this.bestGain = this.bestsScores.bestGain;
+      this.playerCoinsReference -= this.bestsScores.coinsWins;
     }
 
     // Volume FX
@@ -685,6 +710,7 @@ export default {
         this.$store.dispatch('setUserTotalCoins', this.totalCoins);
         this.checkIfPlayerCanPlay();
         this.focusBtnShuffleAllRollers();
+        this.storeJackpotScores();
       }
       
     },
@@ -807,6 +833,9 @@ export default {
     },
 
     launchFrameCaseWin(winDirection){
+      const roller1 = document.querySelector('.roller-1');
+      const roller2 = document.querySelector('.roller-2');
+      const roller3 = document.querySelector('.roller-3');
       const fc1   = document.querySelector(".fc1");
       const fc2   = document.querySelector(".fc2");
       const fc3   = document.querySelector(".fc3");
@@ -825,6 +854,10 @@ export default {
       const s7    = document.querySelector(".s7");
       const s8    = document.querySelector(".s8");
       const s9    = document.querySelector(".s9");
+
+      roller1.classList.add('caseWin');
+      roller2.classList.add('caseWin');
+      roller3.classList.add('caseWin');
 
       if(winDirection == 'byTopDiag'){
         fc1.classList.add('active');
@@ -905,6 +938,9 @@ export default {
     },
 
     removeAllFrameCaseWin(){
+      const roller1 = document.querySelector('.roller-1');
+      const roller2 = document.querySelector('.roller-2');
+      const roller3 = document.querySelector('.roller-3');
       const fc1   = document.querySelector(".fc1");
       const fc2   = document.querySelector(".fc2");
       const fc3   = document.querySelector(".fc3");
@@ -923,6 +959,10 @@ export default {
       const s7    = document.querySelector(".s7");
       const s8    = document.querySelector(".s8");
       const s9    = document.querySelector(".s9");
+
+      roller1.classList.remove('caseWin');
+      roller2.classList.remove('caseWin');
+      roller3.classList.remove('caseWin');
 
       fc1.classList.remove('active');
       fc2.classList.remove('active');
@@ -955,7 +995,11 @@ export default {
       this.playerCoinsGains += gains - playerBet;
       this.totalCoins += gains;
       const realProfitGains = gains; //= gains - playerBet; // if + playerBet || 0;
+      if(gains > this.bestGain){
+        this.bestGain = gains;
+      }
       this.launchAnimationGains(realProfitGains);
+      this.storeJackpotScores();
       this.$store.dispatch('setUserTotalCoins', this.totalCoins);
     },
     
@@ -967,14 +1011,37 @@ export default {
     },
 
     payThePlayerForSpecialWanted(wantedValue, playerBet, itemsFound){
+      this.specialWantedFound += itemsFound;
       this.totalCoinsAncient = this.totalCoins;
       this.itemsFoundForSpecialWanted = itemsFound;
       const gains = (playerBet * wantedValue * itemsFound);
       this.lastGains = gains;
+      this.specialWantedGains += gains;
       this.playerCoinsGains += gains - playerBet;
       this.totalCoins += gains;
+      if(gains > this.bestGain){
+        this.bestGain = gains;
+      }
+      this.specialWantedWin++;
+      this.storeJackpotScores();
       this.$store.dispatch('setUserTotalCoins', this.totalCoins);
       this.launchAnimationSpecialWanted();
+    },
+
+    storeJackpotScores(){
+      // const coinsLoses = this.playerCoinsLoses - this.specialWantedGains;
+      // const spinsLoses = this.playerStrokesLoses - this.specialWantedWin;
+      const coinsWins = this.totalCoins - this.playerCoinsReference;
+      let allScoresObject = {
+        coinsWins : coinsWins, 
+        specialWanted : this.specialWantedFound, 
+        specialWantedGains : this.specialWantedGains,
+        specialWantedWin : this.specialWantedWin,
+        spinsWins : this.playerStrokesWins, 
+        spinsLoses : this.playerStrokesLoses,
+        bestGain: this.bestGain
+      };
+      this.$store.dispatch('userBestsScoresJackpot', JSON.stringify(allScoresObject) );
     },
 
     launchAnimationSpecialWanted(){
@@ -1372,7 +1439,8 @@ export default {
                     }
                   }
                 }
-                .roller::before, .roller::after{
+
+                .roller .top-roller-addition, .roller .bottom-roller-addition, .roller::before, .roller::after{
                   position: absolute;
                   content: '';
                   left: 0;
@@ -1382,19 +1450,31 @@ export default {
                 .roller::before{
                   top: -30px;
                 }
+                .roller .top-roller-addition{
+                  top: -30px;
+                }
                 .roller::after{
                   bottom: -30px; 
                 }
+                .roller .bottom-roller-addition{
+                  bottom: -30px;
+                }
+
                 .roller.white{
                   background: var(--white);
                 }
-                .roller.white::before, .roller.white::after{
+                .roller.caseWin::before, .roller.caseWin::after{
+                  background: rgba(0, 0, 0, 0.7);
+                  z-index: 1;
+                }
+                .roller.white .top-roller-addition, .roller.white .bottom-roller-addition{
                   background: var(--white);
                 }
                 .roller.grey{
                   background: #50606c;
                 }
-                .roller.grey::before, .roller.grey::after{
+
+                .roller.grey .top-roller-addition, .roller.grey .bottom-roller-addition{
                   background: #50606c;
                 }
     
@@ -1421,7 +1501,7 @@ export default {
                   z-index: 1;
                   background: url('../assets/img/wallpaper/stripes-rolling102.png');
                   opacity: 0;
-                  animation: rollerIsRolling .12s infinite linear; //.38
+                  animation: rollerIsRolling .24s infinite linear; //.38
                 }
                 .roller-1.starter .isRolling{
                   animation-delay: .26s;
@@ -1432,6 +1512,8 @@ export default {
                 .roller-3.starter .isRolling{
                   animation-delay: .34s;
                 }
+
+                
               }
             }
             .rollers::before{
@@ -1619,8 +1701,9 @@ export default {
 
 @keyframes rollerIsRolling {
   from { top: -1824px; opacity: .3;}
-  to   { top: 0px; opacity: .3;}
+  to   { top: 0; opacity: .3;}
 }
+
 
 @keyframes rollerToStop {
   0% { transform: translateY(0px); }
@@ -1802,7 +1885,7 @@ export default {
                       }
                     }
                   }
-                  .roller::before, .roller::after{
+                  .roller::before, .roller::after, .roller .top-roller-addition, .roller .bottom-roller-addition{
                     width: 76px;
                   }
                 }

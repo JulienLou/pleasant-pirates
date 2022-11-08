@@ -39,6 +39,11 @@ const routes = [
     path: '/Policy',
     name: 'MentionsLégales',
     component: () => import(/* webpackChunkName: "MentionsLégales" */ '../views/PolicyView.vue')
+  },
+  {
+    path: "/:pathMatch(.*)*",
+    name: 'NotFound',
+    component: () => import(/* webpackChunkName: "MentionsLégales" */ '../views/NotFound.vue')
   }
 ]
 
@@ -48,3 +53,5 @@ const router = createRouter({
 })
 
 export default router
+
+// Voir comment faire pour suuprimer le Hash...

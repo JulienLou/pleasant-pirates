@@ -28,6 +28,7 @@
         <p>Tout contenu téléchargé se fait aux risques et périls de l’utilisateur et sous sa seule responsabilité. En conséquence, ne saurait être tenu responsable d’un quelconque dommage subi par l’ordinateur de l’utilisateur ou d’une quelconque perte de données consécutives au téléchargement.</p>
         <p>De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour.</p>
         <p>Les liens hypertextes mis en place dans le cadre du présent site internet en direction d’autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de Pleasant Pirates et de son auteur.</p>
+        <p>Jeux: Les crédits ou argent gagnés dans les jeux pleasant-pirates sont fictifs.</p>
 
         <h3>Propriété intellectuelle :</h3>
         <p>Tout le contenu du présent site www.pleasantpirates.julienlouvet.com, incluant, de façon non limitative, les graphismes, textes, animations, logos ainsi que leur mise en forme sont la propriété exclusive de son auteur à l’exception des images, vidéos, sons, gifs et icônes ou contenus appartenant à d’autres sociétés partenaires ou auteurs.</p>
@@ -38,6 +39,7 @@
         <p>Dans tous les cas, vous pouvez refuser de fournir vos données personnelles. Dans ce cas, vous ne pourrez pas utiliser tout les services du site, notamment celui de solliciter des renseignements, ou de recevoir les lettres d’information.</p>
         <p>Enfin, nous pouvons collecter de manière automatique certaines informations vous concernant lors d’une simple navigation sur notre site internet, notamment : des informations concernant l’utilisation de notre site, comme les zones que vous visitez et les services auxquels vous accédez, votre adresse IP, le type de votre navigateur, vos temps d’accès.</p>
         <p>De telles informations sont utilisées exclusivement à des fins de statistiques internes, de manière à améliorer la qualité des services qui vous sont proposés. Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.</p>
+        
       </div>
       
     </section>

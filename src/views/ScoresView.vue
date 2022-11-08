@@ -127,12 +127,88 @@
             </table>
           </div>
 
+          <!-- jackpot -->
+          <div class="game-scores border-theme">
+            <h3>Jackpot</h3>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Meilleur Gain</td>
+                  <td>
+                    {{
+                      bestsScoresJackpot.bestGain >= 0
+                        ? commify(bestsScoresJackpot.bestGain)
+                        : 0
+                    }}
+                  </td>
+                </tr>
+                <tr>
+                  <td>Argent gagné</td>
+                  <!-- {{bestsScoresJackpot.coinsWins ? (bestsScoresJackpot.coinsWins >= 0 ? 'gagné' : 'perdu') : 'gagné'}} -->
+                  <td>
+                    {{
+                      bestsScoresJackpot.coinsWins 
+                      ? commify(bestsScoresJackpot.coinsWins)
+                      : '0'
+                    }}
+                    <!-- {{
+                      bestsScoresJackpot.coinsWins + bestsScoresJackpot.specialWantedGains >= 0
+                        ? commify(bestsScoresJackpot.coinsWins + bestsScoresJackpot.specialWantedGains)
+                        : 0
+                    }} -->
+                  </td>
+                </tr>
+                <tr>
+                  <td>Spins joués</td>
+                  <td>
+                    {{
+                      bestsScoresJackpot.spinsWins + bestsScoresJackpot.spinsLoses >= 0
+                        ? commify(bestsScoresJackpot.spinsWins + bestsScoresJackpot.spinsLoses)
+                        : 0
+                    }}
+                  </td>
+                </tr>
+                <tr>
+                  <td>Spins gagnés</td>
+                  <td>
+                    {{
+                      bestsScoresJackpot.spinsWins >= 0
+                        ? commify(bestsScoresJackpot.spinsWins)
+                        : 0
+                    }}
+                  </td>
+                </tr>
+                <tr>
+                  <td>Spins perdus</td>
+                  <td>
+                    {{
+                      bestsScoresJackpot.spinsLoses - bestsScoresJackpot.specialWantedWin >= 0
+                        ? commify(bestsScoresJackpot.spinsLoses - bestsScoresJackpot.specialWantedWin)
+                        : 0
+                    }}
+                  </td>
+                </tr>
+                <tr>
+                  <td>Spécial wanted</td>
+                  <td>
+                    {{
+                      bestsScoresJackpot.specialWanted >= 0
+                        ? commify(bestsScoresJackpot.specialWanted)
+                        : 0
+                    }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- /jackpot -->
+
           <div class="game-scores border-theme">
             <h3>Stats</h3>
             <table>
               <tbody>
                 <tr>
-                  <td>Pièces d'or gagnées</td>
+                  <td>Pièces d'or</td>
                   <td>{{ totalCoins >= 0 ? commify(totalCoins) : 0 }}</td>
                 </tr>
                 <tr>
@@ -175,6 +251,7 @@ export default {
       templateColorChoice: "template-blue",
       bestsScoresMemory: {},
       bestsScoresSlide: {},
+      bestsScoresJackpot: {},
       totalCoins: 0,
       nbPlayedMemory: 0,
       nbPlayedSlide: 0,
@@ -206,6 +283,12 @@ export default {
     if (localStorage.getItem("nbPlayedSlide")) {
       this.nbPlayedSlide = Number(localStorage.getItem("nbPlayedSlide"));
     }
+    // Slide Bests Scores
+    if (localStorage.getItem("jackpotBestsScores")) {
+      this.bestsScoresJackpot = JSON.parse(
+        localStorage.getItem("jackpotBestsScores")
+      );
+    }
     // User Total Coins
     if (localStorage.getItem("userTotalCoins")) {
       this.totalCoins = Number(localStorage.getItem("userTotalCoins"));
@@ -235,8 +318,7 @@ export default {
 
 <style lang="scss" scoped>
 .scores {
-  background: url("../assets/img/wallpaper/scorespage.jpg") no-repeat center
-    fixed;
+  background: url("../assets/img/wallpaper/scorespage.jpg") no-repeat center fixed;
   min-height: 100vh;
   background-size: cover;
   margin-top: 0;

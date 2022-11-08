@@ -5,6 +5,7 @@ export default createStore({
     userThemeColor: '',
     memoryBestScore: {},
     slideBestScore: {},
+    jackpotBestScore: {},
     totalCoins: 0,
     nbPlayedMemory: 0,
     nbPlayedSlide: 0,
@@ -25,6 +26,10 @@ export default createStore({
     setUserBestsScoresSlide(state, allScoresObject){
       state.slideBestScore = allScoresObject;
       localStorage.setItem('slideBestsScores', state.slideBestScore);
+    },
+    setUserBestsScoresJackpot(state, allScoresObject){
+      state.jackpotBestScore = allScoresObject;
+      localStorage.setItem('jackpotBestsScores', state.jackpotBestScore);
     },
 
     setTheUserTotalCoins(state, totalCoins){
@@ -65,6 +70,9 @@ export default createStore({
     },
     userBestsScoresSlide({ commit }, allScoresObject){
       commit('setUserBestsScoresSlide', allScoresObject);
+    },
+    userBestsScoresJackpot({ commit }, allScoresObject){
+      commit('setUserBestsScoresJackpot', allScoresObject);
     },
 
     setUserTotalCoins({ commit }, totalCoins){
