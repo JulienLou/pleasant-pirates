@@ -12,7 +12,9 @@
             <div class="author">
               <img src="../assets/img/wallpaper/author.jpg" alt="photo de l'auteur">
               <p>Bonjour amis pirates et flibustiers ! Je suis Julien Louvet, développeur web. J'ai créé Pleasant Pirates comme site de démonstration en tant que développeur. Mon code est open source et visible sur Github.</p>
-              <div class="d-flex justify-content-center"><a class="cursor-pointer" href="https://julienlouvet.com/" target="_blank">Visite : www.julienlouvet.com</a></div>
+              <div class="d-flex justify-content-center">
+                <div>Visite: <a class="cursor-pointer underline" href="https://julienlouvet.com/" target="_blank">www.julienlouvet.com</a></div>
+              </div>
             </div>
             <div class="myarticles">
               <article>

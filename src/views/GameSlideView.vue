@@ -878,7 +878,7 @@ export default {
 
 <style lang="scss" scoped>
 #slide-game{
-  background: url('../assets/img/wallpaper/ppw3.jpg') no-repeat center fixed;
+  background: url('../assets/img/wallpaper/ppw9r.jpg') no-repeat center fixed;
   min-height: 100vh;
   background-size: cover;
   font-size: 1em;
@@ -887,6 +887,7 @@ export default {
   .game-container{
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
     padding: 10px;
     position: relative;
     border-radius: 18px;

@@ -1167,9 +1167,8 @@ export default {
 .jackpot{
   z-index: 1;
   position: relative;
-  height: 100vh;
-  background: url('../assets/img/wallpaper/ppw3.jpg') no-repeat center fixed;
   min-height: 100vh;
+  background: url('../assets/img/wallpaper/ppw8r.jpg') no-repeat center fixed;
   background-size: cover;
 
   // video{
@@ -1207,7 +1206,8 @@ export default {
     }
 
     .game-container{
-      background-color: rgba(255, 255, 255, 0.2);
+      margin-top: 3rem;
+      background-color: rgba(255, 255, 255, 0.3);
       margin-bottom: .7rem;
       border-radius: 8px;
       backdrop-filter: blur(3px);
@@ -1221,7 +1221,7 @@ export default {
         flex-wrap: wrap;
         
         .special-wanted-container{
-          background-color: rgba(0, 0, 0, 0.25);
+          background-color: rgb(39, 38, 35);
           border-radius: 8px;
           padding: 1em;
           width: 200px;
@@ -1311,12 +1311,13 @@ export default {
         .frame-background{
           position: relative;
           margin: 1.5rem;
+          margin-bottom: 0;
   
           .frame{
             position: relative;
             width: fit-content;
-            outline: 14px solid rgb(39, 38, 35);
-    
+            border: 14px solid rgb(39, 38, 35);
+            border-radius: 8px;
     
             .most-wanted-container.active-win-anim{
               h3{
@@ -1600,7 +1601,7 @@ export default {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 10px;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.7);
       border-radius: 8px;
       backdrop-filter: blur(3px);
       padding: 1em;
@@ -1838,9 +1839,11 @@ export default {
       font-size: .7em;
 
       .game-container{
+        margin: 0;
+        margin-bottom: .3rem;
         .wanted-and-jackpot{
           .special-wanted-container{
-            background-color: rgba(20, 53, 74, 0.764);
+            //background-color: rgba(20, 53, 74, 0.764);
             width: 100%;
             font-size: .7rem;
             padding: 0.3rem;
@@ -1863,7 +1866,8 @@ export default {
             }
           }
           .frame-background{
-            margin: 1rem;
+            margin: 0;
+            margin-top: .3rem;
             .frame{
               overflow: hidden;
               .frame-celebrations{

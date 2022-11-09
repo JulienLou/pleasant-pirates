@@ -184,12 +184,9 @@ body::-webkit-scrollbar-thumb{
     color: var(--yellowpirates)
   }
 
-  // .track-player-container{
-  //   position: relative;
-  //   width: 100vh;
-  //   height: 100vh;
-  //   overflow: hidden;
-  // }
+  .underline{
+    text-decoration: underline;
+  }
 
   .btn-options-container{
     position: fixed;

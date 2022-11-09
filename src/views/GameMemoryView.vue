@@ -701,9 +701,8 @@ export default {
 <style lang="scss" scoped>
 #memory-game {
   position: relative;
-  min-height: 100vh;
   background: transparent;
-  background: url('../assets/img/wallpaper/ppw3.jpg') no-repeat center fixed;
+  background: url('../assets/img/wallpaper/ppw10r.jpg') no-repeat center fixed;
   min-height: 100vh;
   background-size: cover;
 
@@ -792,7 +791,6 @@ export default {
         transform-style: preserve-3d;
         transition: 0.3s all ease-in-out;
         cursor: pointer;
-        
 
         .card__front {
           backface-visibility: hidden;
