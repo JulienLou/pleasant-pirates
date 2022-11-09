@@ -1,7 +1,8 @@
 <template>
   <SpinnerLoader :isLoaded="isLoaded" />
   <div class="home">
-    <video autoplay="autoplay" muted="" loop src="../assets/img/wallpaper/shipday-animated1.mp4"></video>
+    <!-- <video autoplay="autoplay" muted="" loop src="../assets/img/wallpaper/shipday-animated1.mp4"></video> -->
+    <img class="bg-main" src="../assets/img/wallpaper/ppw1.jpg" alt="Image d'accueil">
 
     <div class="black-filter">
 
@@ -153,7 +154,7 @@ export default {
     z-index: 1;
     overflow: hidden;
 
-    video{
+    .bg-main{
       position: fixed;
       top: 50%;
       left: 50%;

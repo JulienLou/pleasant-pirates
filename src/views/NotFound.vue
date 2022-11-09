@@ -22,7 +22,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("../assets/img/wallpaper/notfound.jpg") no-repeat center fixed;
+  background: url("../assets/img/wallpaper/ppw6.jpg") no-repeat center fixed;
   min-height: 100vh;
   background-size: cover;
   margin-top: 0;

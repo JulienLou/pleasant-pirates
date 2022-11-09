@@ -878,7 +878,7 @@ export default {
 
 <style lang="scss" scoped>
 #slide-game{
-  background: url('../assets/img/wallpaper/mg1.jpg') no-repeat center fixed;
+  background: url('../assets/img/wallpaper/ppw3.jpg') no-repeat center fixed;
   min-height: 100vh;
   background-size: cover;
   font-size: 1em;

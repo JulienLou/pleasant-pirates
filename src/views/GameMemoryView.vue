@@ -9,7 +9,8 @@
       <NavbarSide/>
       
       <div class="navbar-margin m100vh" :class="templateColorChoice">
-        <video autoplay="autoplay" muted="" loop src="../assets/img/wallpaper/shipbeach-animated1.mp4"></video>
+        <!-- <video autoplay="autoplay" muted="" loop src="../assets/img/wallpaper/shipbeach-animated1.mp4"></video> -->
+        <!-- <img class="bg-main" src="../assets/img/wallpaper/ppw3.jpg" alt="Image de fond du memorygame"> -->
         <div class="selector">
           <div class="d-flex justify-content-start flex-wrap">
             <div>
@@ -702,15 +703,17 @@ export default {
   position: relative;
   min-height: 100vh;
   background: transparent;
-  z-index: 1;
+  background: url('../assets/img/wallpaper/ppw3.jpg') no-repeat center fixed;
+  min-height: 100vh;
+  background-size: cover;
 
-  video{
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: -99;
-    overflow: hidden;
-  }
+  // .bg-main{
+  //   position: fixed;
+  //   bottom: 0;
+  //   right: 0;
+  //   z-index: -99;
+  //   overflow: hidden;
+  // }
   
 
   .game-container {

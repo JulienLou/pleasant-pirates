@@ -7,7 +7,8 @@
         <button class="btn-option-set unselectable btn-custom btn-solid-white btn-small" @click="this.deleteOptionsVisible = false; toggleModale();"><i class="fa-solid fa-gear rotating"></i> Options</button>
       </div>
       <div class="navbar-margin m100vh">
-        <video autoplay="autoplay" muted="" loop src="../assets/img/wallpaper/shipnight-animated1.mp4"></video>
+        <!-- <video autoplay="autoplay" muted="" loop src="../assets/img/wallpaper/shipnight-animated1.mp4"></video> -->
+        <!-- <img class="bg-main" src="../assets/img/wallpaper/ppw3.jpg" alt="Image de fond du jackpotgame"> -->
 
         <div class="selector">
           <h2>Pleasant Pirates Jackpot</h2>
@@ -1167,15 +1168,18 @@ export default {
   z-index: 1;
   position: relative;
   height: 100vh;
+  background: url('../assets/img/wallpaper/ppw3.jpg') no-repeat center fixed;
+  min-height: 100vh;
+  background-size: cover;
 
-  video{
-    position: fixed;
-    top: -22px;
-    right: 0;
-    z-index: -99;
-    overflow: hidden;
-    min-height: 100%;
-  }
+  // video{
+  //   position: fixed;
+  //   top: -22px;
+  //   right: 0;
+  //   z-index: -99;
+  //   overflow: hidden;
+  //   min-height: 100%;
+  // }
 
   .jackpot-game{
     margin-top: 1rem;
