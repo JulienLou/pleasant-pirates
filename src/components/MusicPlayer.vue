@@ -395,7 +395,7 @@ export default {
     height: fit-content;
     top: 5px;
     left: 10px;
-    z-index: 101;
+    z-index: 201;
   }
 
   .track-player{

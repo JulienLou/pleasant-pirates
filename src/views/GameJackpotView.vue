@@ -48,6 +48,19 @@
               </div>
 
               <div class="frame-background">
+                <div class="frame-deco">
+                  <img src="../assets/img/wallpaper/jackpot-leftside.png" alt="jackpot côté gauche" class="jackpot-leftside">
+                  <img src="../assets/img/wallpaper/jackpot-rightside.png" alt="jackpot côté droit" class="jackpot-rightside">
+                  <img src="../assets/img/wallpaper/jackpot-bottomside3.png" alt="jackpot dessous" class="jackpot-bottomside">
+
+                  <div class="lantern-left"><img src="../assets/img/wallpaper/lantern1.png" alt="Lanterne"><div class="flame"></div></div>
+                  <div class="lantern-right"><img src="../assets/img/wallpaper/lantern1.png" alt="Lanterne"><div class="flame"></div></div>
+
+                  <img class="jackpot-banner" src="../assets/img/wallpaper/banner-jackpot-2.png" alt="Jackpot banner">
+                  <img class="jackpot-skull" src="../assets/img/wallpaper/skull.png" alt="Jackpot banner">
+                  <div class="eye-skull-left"></div>
+                  <div class="eye-skull-right"></div>
+                </div>
 
                 <div class="frame">
 
@@ -712,6 +725,7 @@ export default {
         this.checkIfPlayerCanPlay();
         this.focusBtnShuffleAllRollers();
         this.storeJackpotScores();
+        this.removeActiveEyesSkull();
       }
       
     },
@@ -784,6 +798,7 @@ export default {
     },
     
     launchFrameIndicatorTop(){
+      this.activeEyesSkull();
       this.playSound(this.soundBlic);
       const s1 = document.querySelector(".s1");
       const s5 = document.querySelector(".s5");
@@ -794,6 +809,7 @@ export default {
     },
 
     launchFrameIndicatorMid(){
+      this.activeEyesSkull();
       this.playSound(this.soundSword1);
       const s4 = document.querySelector(".s4");
       const s5 = document.querySelector(".s5");
@@ -804,6 +820,7 @@ export default {
     },
 
     launchFrameIndicatorBot(){
+      this.activeEyesSkull();
       this.playSound(this.soundBlic);
       const s3 = document.querySelector(".s3");
       const s5 = document.querySelector(".s5");
@@ -814,6 +831,7 @@ export default {
     },
 
     launchFrameIndicatorTopStraight(){
+      this.activeEyesSkull();
       this.playSound(this.soundBlic2);
       const s1 = document.querySelector(".s1");
       const s2 = document.querySelector(".s2");
@@ -824,6 +842,7 @@ export default {
     },
 
     launchFrameIndicatorBotStraight(){
+      this.activeEyesSkull();
       this.playSound(this.soundBlic2);
       const s7 = document.querySelector(".s7");
       const s8 = document.querySelector(".s8");
@@ -831,6 +850,20 @@ export default {
       s7.classList.add('lightersquare');
       s8.classList.add('lightersquare');
       s9.classList.add('lightersquare');
+    },
+
+    activeEyesSkull(){
+      const eyeL = document.querySelector(".eye-skull-left");
+      const eyeR = document.querySelector(".eye-skull-right");
+      eyeL.classList.add('active');
+      eyeR.classList.add('active');
+    },
+
+    removeActiveEyesSkull(){
+      const eyeL = document.querySelector(".eye-skull-left");
+      const eyeR = document.querySelector(".eye-skull-right");
+      eyeL.classList.remove('active');
+      eyeR.classList.remove('active');
     },
 
     launchFrameCaseWin(winDirection){
@@ -987,6 +1020,7 @@ export default {
     },
 
     payThePlayer(value, playerBet, multiplier){
+      this.removeActiveEyesSkull();
       this.playerIsPlaying = false;
       this.totalCoinsAncient = this.totalCoins;
       this.playerStrokesWins++;
@@ -1110,7 +1144,7 @@ export default {
     },
 
     randomChanceNewSpecialWanted(){
-      const randomNumber = this.getRandomInt(1, 10);
+      const randomNumber = this.getRandomInt(1, 8);
       if(randomNumber == 1){
         this.defineMostWantedItem();
         this.playCannonBallAnimation();
@@ -1200,7 +1234,7 @@ export default {
         font-family: 'Cinzel', serif;
         font-size: 2em;
         padding: .4em;
-        box-shadow: 0 0 2px var(--white), 0 0 4px var(--white), 0 0 12px var(--white), 0 0 24px var(--white),;
+        box-shadow: 0 0 2px var(--white), 0 0 4px var(--white), 0 0 12px var(--white), 0 0 24px var(--white);
         animation: messageNoMoney 1s ease-in-out infinite;
       }
     }
@@ -1221,7 +1255,7 @@ export default {
         flex-wrap: wrap;
         
         .special-wanted-container{
-          background-color: rgb(39, 38, 35);
+          background: url('../assets/img/wallpaper/woodplank3.jpg') no-repeat top;
           border-radius: 8px;
           padding: 1em;
           width: 200px;
@@ -1230,6 +1264,7 @@ export default {
             font-family: 'Pirata one', serif;
             font-size: 1.5em;
             min-height: 25px;
+            text-shadow: 0 0 2px black;
           }
   
           .img-text-container{
@@ -1310,8 +1345,130 @@ export default {
         
         .frame-background{
           position: relative;
-          margin: 1.5rem;
-          margin-bottom: 0;
+          margin: 3rem 1rem 0 1rem;
+          //margin-bottom: 0;
+
+          .jackpot-banner{
+            position: absolute;
+            top: -50px;
+            left: -30px;
+            z-index: 10;
+            width: 400px;
+          }
+
+          .jackpot-skull{
+            position: absolute;
+            top: -60px;
+            left: 142px;
+            z-index: 10;
+            width: 56px;
+          }
+
+          .eye-skull-left, .eye-skull-right{
+            position: absolute;
+            content: '';
+            z-index: 110;
+            width: 7px;
+            height: 7px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 2px white, 0 0 4px #a8dbff, 0 0 6px #47b2ff, 0 0 8px #47b2ff, 0 0 10px #33aaff , 0 0 12px #47b2ff, 0 0 14px #159eff, 0 0 16px #0095ff;
+            opacity: 0;
+            transition: .7s;
+          }
+          .eye-skull-left{
+            top: -25px;
+            left: 157px;
+          }
+          .eye-skull-right{
+            top: -25px;
+            left: 178px;
+          }
+          .eye-skull-left.active, .eye-skull-right.active{
+            opacity: 1;
+          }
+
+          .jackpot-leftside{
+            position: absolute;
+            top: -10px;
+            left: -9px;
+            z-index: 10;
+            height: 318px;
+          }
+
+          .jackpot-rightside{
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            z-index: 10;
+            height: 318px;
+          }
+
+          .jackpot-bottomside{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            z-index: 10;
+            width: 336px;
+          }
+
+          .lantern-left, .lantern-right{
+            position: absolute;
+            z-index: 10;
+          }
+
+          .lantern-left .flame, .lantern-right .flame{
+            position: relative;
+          }
+
+          .lantern-left .flame::after, .lantern-right .flame::after{
+            position: absolute;
+            z-index: 1210;
+            content: '';
+            width: 5px;
+            height: 5px;
+            border-radius: 100px;
+            background: rgb(255, 239, 173);
+            box-shadow: 0 0 2px rgb(255, 232, 163),
+            0 0 4px rgb(255, 225, 137), 
+            0 0 6px rgb(255, 220, 114),
+            0 0 8px rgb(255, 213, 86),
+            0 0 10px rgb(255, 204, 74),
+            0 0 14px rgb(255, 192, 76),
+            0 0 18px rgb(255, 189, 67),
+            0 0 22px rgb(255, 168, 45), 
+            0 0 30px rgb(255, 154, 31),
+            0 0 38px rgb(255, 147, 15),
+            0 0 46px rgb(255, 147, 15);
+          }
+
+          .lantern-left .flame::after{
+            bottom: 37px;
+            left: 37px;
+            animation: flameLeft 8s ease-in-out infinite;
+          }
+
+          .lantern-right .flame::after{
+            bottom: 37px;
+            right: 38px;
+            animation: flameLeft 7.5s ease-in-out infinite;
+          }
+
+          .lantern-left img, .lantern-right img{
+            width: 80px;
+          }
+
+          .lantern-left{
+            top: -110px;
+            left: -45px;
+            animation: lanternRollLeft 12s ease-in-out infinite;
+          }
+          
+          .lantern-right{
+            top: -110px;
+            right: -45px;
+            animation: lanternRollRight 12s ease-in-out infinite;
+          }
   
           .frame{
             position: relative;
@@ -1679,6 +1836,49 @@ export default {
   100%{ scale:.8; opacity: 0; color: orange;}
 }
 
+@keyframes lanternRollLeft {
+  0%  { transform: rotate(5deg);}
+  10% { transform: rotate(-5deg);}
+  20% { transform: rotate(4deg);}
+  30% { transform: rotate(-4deg); }
+  40% { transform: rotate(3deg);}
+  50% { transform: rotate(-3deg);}
+  60% { transform: rotate(3deg);}
+  70% { transform: rotate(-2deg);}
+  80% { transform: rotate(3deg);}
+  90% { transform: rotate(-4deg);}
+  100%{ transform: rotate(5deg);}
+}
+
+@keyframes lanternRollRight {
+  0%  { transform: rotate(4deg);}
+  11% { transform: rotate(-4deg);}
+  22% { transform: rotate(4deg);}
+  32% { transform: rotate(-3deg); }
+  42% { transform: rotate(3deg);}
+  52% { transform: rotate(-2deg);}
+  62% { transform: rotate(3deg);}
+  72% { transform: rotate(-3deg);}
+  82% { transform: rotate(4deg);}
+  91% { transform: rotate(-5deg);}
+  100%{ transform: rotate(4deg);}
+}
+
+@keyframes flameLeft {
+  0% { transform: scale(2);}
+  10% { transform: scale(1);}
+  20% { transform: scale(2);}
+  30% { transform: scale(1);}
+  40% { transform: scale(2.5);}
+  50% { transform: scale(1.2);}
+  60% { transform: scale(2);}
+  70% { transform: scale(1);}
+  80% { transform: scale(2.7);}
+  90% { transform: scale(1.4);}
+  100% { transform: scale(2);}
+  
+}
+
 @keyframes winSpecialWantedTextH3 {
   0%  { scale:1; }
   20% { color: white; text-shadow: 0 0 2px var(--white), 0 0 10px var(--white);}
@@ -1868,6 +2068,9 @@ export default {
           .frame-background{
             margin: 0;
             margin-top: .3rem;
+            .frame-deco{
+              display: none;
+            }
             .frame{
               overflow: hidden;
               .frame-celebrations{

@@ -2,7 +2,7 @@
   <SpinnerLoader :isLoaded="isLoaded" />
   <div class="home">
     <!-- <video autoplay="autoplay" muted="" loop src="../assets/img/wallpaper/shipday-animated1.mp4"></video> -->
-    <img class="bg-main" src="../assets/img/wallpaper/ppw1.jpg" alt="Image d'accueil">
+    <img class="bg-main" src="../assets/img/wallpaper/ppw11.jpg" alt="Image d'accueil">
 
     <div class="black-filter">
 
