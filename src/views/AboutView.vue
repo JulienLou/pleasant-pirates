@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss" scoped>
 .about{
-  background: url('../assets/img/wallpaper/ppw3.jpg') no-repeat center fixed;
+  background: url('../assets/img/wallpaper/25r.jpg') no-repeat center fixed;
   background-size: cover;
   min-height: 100vh;
   position: relative;

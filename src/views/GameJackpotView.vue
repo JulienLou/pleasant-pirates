@@ -34,8 +34,8 @@
                     <div class="cannonball-fire"><CannonBall/></div>
                     <div class="win-text">
                       <div class="multiplier">
-                        <div class="letter-x">x</div>
-                        <div class="items-found">{{ itemsFoundForSpecialWanted }}</div>
+                        <div class="letter-x text-shadow">x</div>
+                        <div class="items-found text-shadow">{{ itemsFoundForSpecialWanted }}</div>
                       </div>
                     </div>
                   </div>
@@ -56,7 +56,7 @@
                   <div class="lantern-left"><img src="../assets/img/wallpaper/lantern1.png" alt="Lanterne"><div class="flame"></div></div>
                   <div class="lantern-right"><img src="../assets/img/wallpaper/lantern1.png" alt="Lanterne"><div class="flame"></div></div>
 
-                  <img class="jackpot-banner" src="../assets/img/wallpaper/banner-jackpot-2.png" alt="Jackpot banner">
+                  <img class="jackpot-banner" src="../assets/img/wallpaper/banner-jackpot-7.png" alt="Jackpot banner">
                   <img class="jackpot-skull" src="../assets/img/wallpaper/skull.png" alt="Jackpot banner">
                   <div class="eye-skull-left"></div>
                   <div class="eye-skull-right"></div>
@@ -1144,7 +1144,7 @@ export default {
     },
 
     randomChanceNewSpecialWanted(){
-      const randomNumber = this.getRandomInt(1, 8);
+      const randomNumber = this.getRandomInt(1, 7);
       if(randomNumber == 1){
         this.defineMostWantedItem();
         this.playCannonBallAnimation();
@@ -1202,7 +1202,7 @@ export default {
   z-index: 1;
   position: relative;
   min-height: 100vh;
-  background: url('../assets/img/wallpaper/ppw8r.jpg') no-repeat center fixed;
+  background: url('../assets/img/wallpaper/19r.jpg') no-repeat center fixed;
   background-size: cover;
 
   // video{
@@ -1244,7 +1244,7 @@ export default {
       background-color: rgba(255, 255, 255, 0.3);
       margin-bottom: .7rem;
       border-radius: 8px;
-      backdrop-filter: blur(3px);
+      backdrop-filter: blur(1px);
       padding: 1em;
       overflow: hidden;
 
@@ -1276,6 +1276,7 @@ export default {
               border-radius: 10px;
               margin: .7em auto;
               width: fit-content;
+              background-color: var(--white);
   
               #most-wanted-img{
                 width: 90px;
@@ -1301,6 +1302,7 @@ export default {
                 font-weight: bold;
                 color: var(--white);
                 margin-left: .2em;
+
                 .items-found{
                   font-weight: bold;
                   font-size: 3rem;
@@ -1423,35 +1425,47 @@ export default {
 
           .lantern-left .flame::after, .lantern-right .flame::after{
             position: absolute;
-            z-index: 1210;
+            z-index: 10;
             content: '';
             width: 5px;
             height: 5px;
             border-radius: 100px;
             background: rgb(255, 239, 173);
-            box-shadow: 0 0 2px rgb(255, 232, 163),
+            box-shadow: 0 0 1px rgb(255, 232, 163),
+            0 0 2px rgb(255, 232, 163),
+            0 0 3px rgb(255, 225, 137), 
             0 0 4px rgb(255, 225, 137), 
+            0 0 5px rgb(255, 220, 114),
             0 0 6px rgb(255, 220, 114),
+            0 0 7px rgb(255, 213, 86),
             0 0 8px rgb(255, 213, 86),
+            0 0 9px rgb(255, 204, 74),
             0 0 10px rgb(255, 204, 74),
+            0 0 12px rgb(255, 192, 76),
             0 0 14px rgb(255, 192, 76),
+            0 0 16px rgb(255, 189, 67),
             0 0 18px rgb(255, 189, 67),
+            0 0 20px rgb(255, 168, 45), 
             0 0 22px rgb(255, 168, 45), 
+            0 0 26px rgb(255, 154, 31),
             0 0 30px rgb(255, 154, 31),
+            0 0 34px rgb(255, 147, 15),
             0 0 38px rgb(255, 147, 15),
-            0 0 46px rgb(255, 147, 15);
+            0 0 42px rgb(255, 147, 15),
+            0 0 46px rgb(255, 147, 15),
+            0 0 56px rgb(253, 110, 0);
           }
 
           .lantern-left .flame::after{
             bottom: 37px;
             left: 37px;
-            animation: flameLeft 8s ease-in-out infinite;
+            animation: flameLantern 8s ease-in-out infinite;
           }
 
           .lantern-right .flame::after{
             bottom: 37px;
             right: 38px;
-            animation: flameLeft 7.5s ease-in-out infinite;
+            animation: flameLantern 14s ease-in-out infinite;
           }
 
           .lantern-left img, .lantern-right img{
@@ -1864,17 +1878,27 @@ export default {
   100%{ transform: rotate(4deg);}
 }
 
-@keyframes flameLeft {
+@keyframes flameLantern {
   0% { transform: scale(2);}
-  10% { transform: scale(1);}
-  20% { transform: scale(2);}
-  30% { transform: scale(1);}
-  40% { transform: scale(2.5);}
-  50% { transform: scale(1.2);}
-  60% { transform: scale(2);}
-  70% { transform: scale(1);}
-  80% { transform: scale(2.7);}
-  90% { transform: scale(1.4);}
+  5% { transform: scale(1.5);}
+  10% { transform: scale(2.4);}
+  15% { transform: scale(1.8);}
+  20% { transform: scale(2.8);}
+  25% { transform: scale(1.8);}
+  30% { transform: scale(2.3);}
+  35% { transform: scale(1.8);}
+  40% { transform: scale(2.7);}
+  45% { transform: scale(1.4);}
+  50% { transform: scale(1.9);}
+  55% { transform: scale(1.2);}
+  60% { transform: scale(1.7);}
+  65% { transform: scale(1.1);}
+  70% { transform: scale(1.8);}
+  75% { transform: scale(1.3);}
+  80% { transform: scale(2.1);}
+  85% { transform: scale(1.6);}
+  90% { transform: scale(2.2);}
+  95% { transform: scale(1.4);}
   100% { transform: scale(2);}
   
 }
@@ -2017,6 +2041,12 @@ export default {
           flex-wrap: wrap-reverse;
           .spin-all-btn{
             width: 200px;
+          }
+          button{
+            margin: .3em;
+            height: fit-content;
+            width: 90px !important;
+            font-size: .9rem !important;
           }
         }
       }

@@ -318,7 +318,7 @@ export default {
 
 <style lang="scss" scoped>
 .scores {
-  background: url("../assets/img/wallpaper/ppw11.jpg") no-repeat center fixed;
+  background: url("../assets/img/wallpaper/24r.jpg") no-repeat center fixed;
   min-height: 100vh;
   background-size: cover;
   margin-top: 0;

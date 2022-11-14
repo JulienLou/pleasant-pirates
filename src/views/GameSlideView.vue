@@ -878,7 +878,7 @@ export default {
 
 <style lang="scss" scoped>
 #slide-game{
-  background: url('../assets/img/wallpaper/ppw15.jpg') no-repeat center fixed;
+  background: url('../assets/img/wallpaper/21r.jpg') no-repeat center fixed;
   min-height: 100vh;
   background-size: cover;
   font-size: 1em;
@@ -887,10 +887,10 @@ export default {
   .game-container{
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(1px);
     padding: 10px;
     position: relative;
-    border-radius: 18px;
+    border-radius: 8px;
     width: fit-content;
     animation: .2s linear slidein;
 
@@ -1042,8 +1042,8 @@ export default {
   // Colors ---------------------------------------------------------------------------------
   .template-blue{
     .game-container{
-      background-color: #00204559;
-      border: 1px solid var(--bluelight1);
+      background-color: rgba(0, 66, 104, 0.3);
+      //border: 1px solid var(--bluelight1);
 
       .puzzle-table{
         border: 10px solid var(--bluemedium1);
@@ -1061,7 +1061,7 @@ export default {
 
   .template-dark {
     .game-container{
-      border: 1px solid var(--ordalight1);
+      //border: 1px solid var(--ordalight1);
 
       .puzzle-table{
         border: 10px solid var(--ordalight1);

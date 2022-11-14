@@ -702,7 +702,7 @@ export default {
 #memory-game {
   position: relative;
   background: transparent;
-  background: url('../assets/img/wallpaper/ppw12b.jpg') no-repeat center fixed;
+  background: url('../assets/img/wallpaper/23r.jpg') no-repeat center fixed;
   min-height: 100vh;
   background-size: cover;
 

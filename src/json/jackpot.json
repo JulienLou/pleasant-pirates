@@ -26,9 +26,9 @@
     },
     {
       "id": 5,
-      "name": "Barre de gouvernail",
-      "imgPath": "assets/img/jackpot/ship-steering-wheel.png",
-      "value" : 2
+      "name": "Tricorne",
+      "imgPath": "assets/img/jackpot/tricorne.png",
+      "value" : 4
     },
     {
       "id": 6,
@@ -110,21 +110,9 @@
     },
     {
       "id": 18,
-      "name": "Tricorne",
-      "imgPath": "assets/img/jackpot/tricorne2.png",
-      "value" : 1
-    },
-    {
-      "id": 19,
       "name": "Canon",
       "imgPath": "assets/img/jackpot/cannon.png",
       "value" : 3
-    },
-    {
-      "id": 20,
-      "name": "Pièces d'or",
-      "imgPath": "assets/img/jackpot/coins.png",
-      "value" : 5
     }
   ]
 }

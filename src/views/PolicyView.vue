@@ -32,8 +32,6 @@
 
         <h3>Propriété intellectuelle :</h3>
         <p>Tout le contenu du présent site www.pleasantpirates.julienlouvet.com, incluant, de façon non limitative, les graphismes, textes, animations, logos ainsi que leur mise en forme sont la propriété exclusive de son auteur à l’exception des images, vidéos, sons, gifs et icônes ou contenus appartenant à d’autres sociétés partenaires ou auteurs.</p>
-        <p>Auteur des fonds d'écran du memory-game, jackpot-game: <a class="cursor-pointer underline" href="http://www.freepik.com" target="_blank">Designed by upklyak / Freepik</a></p>
-        <p>Auteur des fonds d'écran du home-page/accueil, about/à propos, slide-game: <a class="cursor-pointer underline"  href="https://www.freepik.com">designed by Vectorpouch - Freepik.com</a></p>
 
         <h3>Données personnelles :</h3>
         <p>De manière générale, vous n’êtes pas tenu de nous communiquer vos données personnelles lorsque vous visitez notre site/sous-domaine internet www.pleasantpirates.julienlouvet.com.</p>
